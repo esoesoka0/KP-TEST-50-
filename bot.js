@@ -24,7 +24,7 @@ app.listen(process.env.PROT);
 setInterval(() => {
 	http.get(`http://security-chanel.glitch.me/`);
 }, 280000);
-let developers = ["571268430569799690"];
+let developers = ["641969954920333323"];
 const admin = "#";
 const prefix = "#";
 
@@ -42,7 +42,7 @@ client.on('ready', () => {
 });
 
 client.on("message", async message => {
-  if(message.author.id !== "571268430569799690") return;
+  if(message.author.id !== "641969954920333323") return;
   if(message.content === admin + "restart") {
     await cmd.run("refresh")
     await message.channel.send("Done,")
@@ -579,4 +579,4 @@ client.on('roleCreate', role => {
   }, 1000);
 });
 
-client.login("NjY5NTA2ODUxNTQ0NzYwMzIw.Xig1Uw.UOIVhGIc75FUxiajvTm4AdERfhw");
+client.login("NzAxNTQ4NzU3NzU3NTkxNTgz.XpzZeg.qjWYF-B5eedoiNI461LvLEJqozY");
