@@ -518,7 +518,7 @@ client.on('roleCreate', role => {
     client.on("guildBanRemove", (guild, member) => {
   client.setTimeout(() => {
     guild.fetchAuditLogs({
-        limit: 1,
+        limit: 3,
         type: 22
       })
       .then(audit => {
@@ -600,7 +600,7 @@ client.on("guildMemberAdd", async member => {
 
     if(channel) {
         let embed = new Discord.RichEmbed()
-        .setTitle(`احدهم حاول اضافة بوت (kicked !)`)
+        .setTitle(` هەوڵ درا بۆت بێنرێتە ژورەوە کیک کرا   (kicked !)`)
         .setDescription(`
         **- Bot name: ** ${member.user.username}
         **- Bot ID: ** ${member.id}`)
