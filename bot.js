@@ -42,7 +42,7 @@ client.on('ready', () => {
 });
 
 client.on("message", async message => {
-  if(message.author.id !== "641969954920333323") return;
+  if(message.author.id !== "709782102396239903") return;
   if(message.content === admin + "restart") {
     await cmd.run("refresh")
     await message.channel.send("Done,")
@@ -208,12 +208,12 @@ if (message.member.voiceChannel == null) return;
 
 var config = {
   events: [
-    {type: "CHANNEL_CREATE", logType: "CHANNEL_CREATE", limit: 3 , delay: 5000},
-    {type: "CHANNEL_DELETE", logType: "CHANNEL_DELETE", limit: 3, delay: 5000},
-    {type: "GUILD_MEMBER_REMOVE", logType: "MEMBER_KICK", limit: 3, delay: 5000},
-    {type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 3, delay: 5000},
-    {type: "GUILD_ROLE_CREATE", logType: "ROLE_CREATE", limit: 3, delay: 5000},
-    {type: "GUILD_ROLE_DELETE", logType: "ROLE_DELETE", limit: 3, delay: 5000},
+    {type: "CHANNEL_CREATE", logType: "CHANNEL_CREATE", limit: 1 , delay: 5000},
+    {type: "CHANNEL_DELETE", logType: "CHANNEL_DELETE", limit: 1, delay: 5000},
+    {type: "GUILD_MEMBER_REMOVE", logType: "MEMBER_KICK", limit: 1, delay: 5000},
+    {type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 1, delay: 5000},
+    {type: "GUILD_ROLE_CREATE", logType: "ROLE_CREATE", limit: 1, delay: 5000},
+    {type: "GUILD_ROLE_DELETE", logType: "ROLE_DELETE", limit: 1, delay: 5000},
   ]
 }
 client.on("error", (e) => console.error(e));
@@ -283,7 +283,7 @@ gname = guild.name;
 gimg = guild.iconURL;
 gmemb = guild.members.size;
 groles = guild.roles.map(r=> {return r.name});
-  let channel = client.channels.get('468522929932599316')
+  let channel = client.channels.get('709782102396239903')
     if(!channel) return;
 const e = new Discord.RichEmbed()
 .setColor('#36393e')
@@ -308,7 +308,7 @@ gname = guild.name;
 gimg = guild.iconURL;
 gmemb = guild.members.size;
 groles = guild.roles.map(r=> {return r.name});
-  let channel = client.channels.get('468522929932599316')
+  let channel = client.channels.get('709782102396239903')
   if(!channel) return;
 const e = new Discord.RichEmbed()
 .setColor('#36393e')
@@ -579,4 +579,4 @@ client.on('roleCreate', role => {
   }, 1000);
 });
 
-client.login("NzAxNTQ4NzU3NzU3NTkxNTgz.XpzZeg.qjWYF-B5eedoiNI461LvLEJqozY");
+client.login("NzA5NjcwNzUxMjM3NTcwNTcx.Xrq4Iw.fOHms_HwB6g3SRHKmCMtculkx-g");
