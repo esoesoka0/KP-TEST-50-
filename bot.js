@@ -37,7 +37,7 @@ client.on('ready', () => {
   console.log(`Servers : [ " ${client.guilds.size} " ]`);
   console.log(`Users : [ " ${client.users.size} " ]`);
   console.log(`Channels : [ " ${client.channels.size} " ]`);
-   client.user.setActivity("chanel",{type: 'WATCHING'})
+   client.user.setActivity("em",{type: 'WATCHING'})
    client.user.setStatus("idle")
 });
 
@@ -556,7 +556,7 @@ client.on("message", async message => {
    
  
  
-    const prefix = "-" // البرفكس
+    const prefix = "t!" // البرفكس
  
  
  
@@ -574,17 +574,17 @@ let antibot = await db.fetch(`antibot_${message.guild.id}`);
     if(cmd === "antibot") {
     if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
         return message.reply(`Only ADMINISTRATOR can use this command`)
-        if(!args[0]) return message.reply(`Where antibot mode ? \`off / on\``)
+        if(!args[0]) return message.reply(`___***دەتەوێت بۆت بێتە ژوروە یان نەیەت؟***___ \`off / on\``)
  
  
         if(args[0] === "on") {
             db.set(`antibot_${message.guild.id}`, "on")
-            message.reply(`Antibot now is __**ON**__`)
+            message.reply(`__***ئێستا بۆت ناتوانێ جۆینی سێرڤەر بکات***__`)
         }
  
         if(args[0] === "off") {
             db.set(`antibot_${message.guild.id}`, "off")
-            message.reply(`Antibot now is __**OFF**__`)
+            message.reply(`___***ئێستا بۆت دەتوانێ جۆینی سێرڤەر بکات***__`)
  
         }
     }
@@ -596,7 +596,7 @@ client.on("guildMemberAdd", async member => {
         if(member.user.bot) member.kick("Anti bot is on !")
     }
 
-    let channel = member.guild.channels.find("name", "logs"); // اسم الروم الخاص باللوق
+    let channel = member.guild.channels.find("name", "log"); // اسم الروم الخاص باللوق
 
     if(channel) {
         let embed = new Discord.RichEmbed()
