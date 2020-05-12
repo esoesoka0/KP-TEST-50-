@@ -42,7 +42,7 @@ client.on('ready', () => {
 });
 
 client.on("message", async message => {
-  if(message.author.id !== "709782102396239903") return;
+  if(message.author.id !== "703637856845037598") return;
   if(message.content === admin + "restart") {
     await cmd.run("refresh")
     await message.channel.send("Done,")
@@ -579,4 +579,4 @@ client.on('roleCreate', role => {
   }, 1000);
 });
 
-client.login("NzA5NjcwNzUxMjM3NTcwNTcx.Xrq4Iw.fOHms_HwB6g3SRHKmCMtculkx-g");
+client.login("NzAzNjM3ODU2ODQ1MDM3NTk4.Xrq9Ow.LrQ0W0H-kXqcDxp8f8kyyjuTZa4");
