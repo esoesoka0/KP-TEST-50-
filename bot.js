@@ -546,4 +546,53 @@ client.on('roleCreate', role => {
   }, 1000);
 });
 
-client.login("NzAzNjM3ODU2ODQ1MDM3NTk4.Xrq9Ow.LrQ0W0H-kXqcDxp8f8kyyjuTZa4");
+
+
+
+
+client.on("message", codes => {
+  if (codes.content.startsWith(prefix + "antibots on")) {
+    if (
+      codes.author.bot ||
+      !codes.channel.guild ||
+      codes.author.id != codes.guild.ownerID
+    )
+      return;
+    client.set(`${codes.guild.id}`, {
+      onoff: "On"
+    });
+
+    codes.channel.send("AntiBots Join Is On");
+  }
+  if (codes.content.startsWith(prefix + "antibots off")) {
+    if (
+      codes.author.bot ||
+      !codes.channel.guild ||
+      codes.author.id != codes.guild.ownerID
+    )
+      return;
+    client.set(`${codes.guild.id}`, {
+      onoff: "Off"
+    });
+    codes.channel.send("AntiBots Join Is Off");
+  }
+});
+
+client.on("guildMemberAdd", member => {
+  if (!client.get(`${member.guild.id}`)) {
+    client.set(`${member.guild.id}`, {
+      onoff: "Off"
+    });
+  }
+  if (client.get(`${member.guild.id}`).onoff == "Off") return;
+  if (member.user.bot) return member.kick();
+});
+
+//////////////////////// sceurty xhorror //////////////////////////////
+
+
+
+
+
+
+client.login("NzAzNjM3ODU2ODQ1MDM3NTk4.XrrDdA.GtvKU3EswHRKz1DLc41EoTnlUgo");
