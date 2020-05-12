@@ -67,7 +67,7 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Nee
 
            }).then(() => {
  const e = new Discord.RichEmbed()
-               .setAuthor('__***بەسەرکەوتویی داخرا***__'+message.author.username)
+               .setAuthor('__***✅🗝بەسەرکەوتویی داخرا***__'+message.author.username)
                 .setColor('#36393e')
                
                message.channel.send(e)
