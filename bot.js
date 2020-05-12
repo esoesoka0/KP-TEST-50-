@@ -52,44 +52,13 @@ client.on("message", async message => {
 
 
 
-
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!developers.includes(message.author.id)) return;
- 
-  if (message.content.startsWith(admin + 'wt')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(` ☑ Client Activity Now Is : \`Watching ${argresult} \` `)
-  } else 
-  if (message.content.startsWith(admin + 'ls')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(` ☑ Client Activity Now Is : \`Listening ${argresult} \` `)
-  } else 
-  if (message.content.startsWith(admin + 'setstream')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");
-     message.channel.send(` ☑ Client Activity Now Is : \`Streaming ${argresult} \` `)
-  }
-  if (message.content.startsWith(admin + 'setname')) {
-  client.user.setUsername(argresult).then
-      message.channel.send(` Client UserName Changed To : \` ${argresult}\` `)
-} else
-if (message.content.startsWith(admin + 'setavatar')) {
-  client.user.setAvatar(argresult);
-      message.channel.send(` Client Avatar Changed To : \` ${argresult}\` `)
-}
-});
-
-
-
-
-
-
+  
 
 
 client.on('message', message => {
 
 if (message.author.bot) return;
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "mc") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "daixa") {
                         if(!message.channel.guild) return;
 
 if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Need ADMINISTRATOR Permission').then(message => message.delete(5000))
@@ -98,13 +67,13 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Nee
 
            }).then(() => {
  const e = new Discord.RichEmbed()
-               .setAuthor('Channel Disabled By : '+message.author.username)
+               .setAuthor('__***بەسەرکەوتویی داخرا***__'+message.author.username)
                 .setColor('#36393e')
                
                message.channel.send(e)
                });
              }
-if (message.content.split(" ")[0].toLowerCase() === prefix + "umc") {
+if (message.content.split(" ")[0].toLowerCase() === prefix + "bikarawa") {
     if(!message.channel.guild) return;
 
 if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Need ADMINISTRATOR Permission').then(message => message.delete(5000))
@@ -113,7 +82,7 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Nee
 
            }).then(() => {
                const e = new Discord.RichEmbed()
-               .setAuthor('Channel Enabled By : '+message.author.username)
+               .setAuthor('__***بەسەرکەوتویی کرایەوە***__'+message.author.username)
                         .setColor('#36393e')
                
                message.channel.send(e)
@@ -155,32 +124,18 @@ client.on('message', message => {
 })
 // ------------ = [Voice Commands] = ------------
 
- client.on('message', message => {
- if (message.content.toLowerCase() === prefix + "move all") {
-     message.delete(4000)
- if(!message.channel.guild) return;
- if (!message.member.hasPermission("MOVE_MEMBERS")) return;
- if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return;
-if (message.member.voiceChannel == null) return;
- var author = message.member.voiceChannelID;
- var m = message.guild.members.filter(m=>m.voiceChannel)
- message.guild.members.filter(m=>m.voiceChannel).forEach(m => {
- m.setVoiceChannel(author)
- })
- message.channel.send('\`Moved All Voice Members To Your Channel\`').then(m => m.delete(4000))
- }
-   });
+ 
 
 //=============================== - [ Security ] - ===================================
 
 var config = {
   events: [
-    {type: "CHANNEL_CREATE", logType: "CHANNEL_CREATE", limit: 1 , delay: 5000},
-    {type: "CHANNEL_DELETE", logType: "CHANNEL_DELETE", limit: 1, delay: 5000},
-    {type: "GUILD_MEMBER_REMOVE", logType: "MEMBER_KICK", limit: 1, delay: 5000},
-    {type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 1, delay: 5000},
-    {type: "GUILD_ROLE_CREATE", logType: "ROLE_CREATE", limit: 1, delay: 5000},
-    {type: "GUILD_ROLE_DELETE", logType: "ROLE_DELETE", limit: 1, delay: 5000},
+    {type: "CHANNEL_CREATE", logType: "CHANNEL_CREATE", limit: 3 , delay: 5000},
+    {type: "CHANNEL_DELETE", logType: "CHANNEL_DELETE", limit: 3, delay: 5000},
+    {type: "GUILD_MEMBER_REMOVE", logType: "MEMBER_KICK", limit: 3, delay: 5000},
+    {type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 3, delay: 5000},
+    {type: "GUILD_ROLE_CREATE", logType: "ROLE_CREATE", limit: 3, delay: 5000},
+    {type: "GUILD_ROLE_DELETE", logType: "ROLE_DELETE", limit: 3, delay: 5000},
   ]
 }
 client.on("error", (e) => console.error(e));
@@ -226,11 +181,11 @@ client.on("reachLimit", (limit)=> {
   const loghack = new Discord.RichEmbed()
        .setAuthor(`${limit.user.tag}`, limit.user.avatarURL)
        .setColor('#36393e')
-       .setDescription(` ${limit.user.username}  ** MGD Server | هذا شخص حاول الأختراق لكن تمت إزلته من الأدارة**  `)
+       .setDescription(` ${limit.user.username}  ___*** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی  لێکرایەوە***___  `)
        .setTimestamp();
   log.send(loghack);
   log.send("@everyone");
-  limit.guild.owner.send(limit.user.username+"\n** MGD Server | هذا شخص حاول الأختراق لكن تمت إزلته من الأدارة**")
+  limit.guild.owner.send(limit.user.username+"___** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی لێکرایەوە**___")
   limit.member.roles.map(role => {
     limit.member.removeRole(role.id)
     .catch(log.send)
@@ -307,7 +262,7 @@ client.on('voiceStateUpdate', (oldM, newM) => {
     if(m1 === false && m2 === true) {
        let embed = new Discord.RichEmbed()
        .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
-       .setDescription(` ${user} اخــذ مــيــوت صــوتــي بــواســطــه  ${newM} `)
+       .setDescription(` ${user} میوتی فۆیس کرا     ${newM} `)
        .setColor('#36393e')
         .setTimestamp()
        ch.send(embed)
@@ -315,7 +270,7 @@ client.on('voiceStateUpdate', (oldM, newM) => {
     if(m1 === true && m2 === false) {
        let embed = new Discord.RichEmbed()
        .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
-       .setDescription(` ${user} فــك عــنــه  مــيــوت صــوتــي بــواســطــه  ${newM} `)
+       .setDescription(` ${user}  میوتی ڤۆیسی کرایەوە  ${newM} `)
        .setColor('#36393e')
        .setTimestamp()
        ch.send(embed)
