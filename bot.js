@@ -278,7 +278,7 @@ client.on('voiceStateUpdate', (oldM, newM) => {
     if(d1 === false && d2 === true) {
        let embed = new Discord.RichEmbed()
        .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
-       .setDescription(` ${user}  اخــذ ديــفــن صــوتــي بــواســطــه   ${newM}`)
+       .setDescription(` ${user}  دیفێندی ڤۆیس کرا    ${newM}`)
        .setColor('#36393e')
        .setTimestamp()
 
@@ -287,7 +287,7 @@ client.on('voiceStateUpdate', (oldM, newM) => {
     if(d1 === true && d2 === false) {
        let embed = new Discord.RichEmbed()
        .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
-       .setDescription(` ${user}  فــك عــنــه ديــفــن صــوتــي بــواســطــه   ${newM}`)
+       .setDescription(` ${user}   دیڤێندی ڤۆیسی لابرا   ${newM}`)
        .setColor('#36393e')
        .setTimestamp()
 
