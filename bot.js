@@ -549,48 +549,68 @@ client.on('roleCreate', role => {
 
 
 
-
-client.on("message", codes => {
-  if (codes.content.startsWith(prefix + "antibots on")) {
-    if (
-      codes.author.bot ||
-      !codes.channel.guild ||
-      codes.author.id != codes.guild.ownerID
-    )
-      return;
-    client.set(`${codes.guild.id}`, {
-      onoff: "On"
-    });
-
-    codes.channel.send("AntiBots Join Is On");
-  }
-  if (codes.content.startsWith(prefix + "antibots off")) {
-    if (
-      codes.author.bot ||
-      !codes.channel.guild ||
-      codes.author.id != codes.guild.ownerID
-    )
-      return;
-    client.set(`${codes.guild.id}`, {
-      onoff: "Off"
-    });
-    codes.channel.send("AntiBots Join Is Off");
-  }
+const db = require("quick.db") // npm i quick.db
+ 
+ 
+client.on("message", async message => {
+   
+ 
+ 
+    const prefix = "-" // البرفكس
+ 
+ 
+ 
+   
+    if (message.author.bot) return;
+    if (!message.guild) return;
+    if (!message.content.startsWith(prefix)) return;
+ 
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const cmd = args.shift().toLowerCase();
+ 
+let antibot = await db.fetch(`antibot_${message.guild.id}`);
+    if(antibot === null) antibot = "off";  
+   
+    if(cmd === "antibot") {
+    if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
+        return message.reply(`Only ADMINISTRATOR can use this command`)
+        if(!args[0]) return message.reply(`Where antibot mode ? \`off / on\``)
+ 
+ 
+        if(args[0] === "on") {
+            db.set(`antibot_${message.guild.id}`, "on")
+            message.reply(`Antibot now is __**ON**__`)
+        }
+ 
+        if(args[0] === "off") {
+            db.set(`antibot_${message.guild.id}`, "off")
+            message.reply(`Antibot now is __**OFF**__`)
+ 
+        }
+    }
+   
 });
+client.on("guildMemberAdd", async member => {
+    let antibot = await db.fetch(`antibot_${member.guild.id}`);
+    if(antibot === "on") {
+        if(member.user.bot) member.kick("Anti bot is on !")
+    }
 
-client.on("guildMemberAdd", member => {
-  if (!client.get(`${member.guild.id}`)) {
-    client.set(`${member.guild.id}`, {
-      onoff: "Off"
-    });
-  }
-  if (client.get(`${member.guild.id}`).onoff == "Off") return;
-  if (member.user.bot) return member.kick();
-});
+    let channel = member.guild.channels.find("name", "logs"); // اسم الروم الخاص باللوق
 
-//////////////////////// sceurty xhorror //////////////////////////////
+    if(channel) {
+        let embed = new Discord.RichEmbed()
+        .setTitle(`احدهم حاول اضافة بوت (kicked !)`)
+        .setDescription(`
+        **- Bot name: ** ${member.user.username}
+        **- Bot ID: ** ${member.id}`)
+        
+        
+        channel.send(embed)
+    }
+    member.guild.owner.send(embed)
 
-
+})
 
 
 
