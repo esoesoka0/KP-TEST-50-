@@ -618,3 +618,14 @@ client.login("NzAzNjM3ODU2ODQ1MDM3NTk4.XrrDdA.GtvKU3EswHRKz1DLc41EoTnlUgo");
   });
 
 
+
+
+client.on("ready", () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+client.on("message", message => {
+  if (message.content === "t!help") {
+    message.channel.send("");
+    message.channel.sendFile("");
+  }
+});
