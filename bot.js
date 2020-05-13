@@ -37,7 +37,7 @@ client.on('ready', () => {
   console.log(`Servers : [ " ${client.guilds.size} " ]`);
   console.log(`Users : [ " ${client.users.size} " ]`);
   console.log(`Channels : [ " ${client.channels.size} " ]`);
-   client.user.setActivity("em",{type: 'WATCHING'})
+   client.user.setActivity("t!help | Security Strong",{type: 'playing'})
    client.user.setStatus("idle")
 });
 
@@ -384,11 +384,11 @@ client.on('messageDelete', message => {
           if (!log) return;
           let embed = new Discord.RichEmbed()
             .setColor('#36393e')          
-            .setTitle('-  مــســح رتــبــه ')
-            .addField(' اســم الــرتــبــه  ', role.name, true)
-            .addField(' هــويــة الــرتــبــه ', role.id, true)
-            .addField(' لــون الــرتــبــه ', role.hexColor, true)
-            .addField(' بــواســطــه ', exec, true)
+            .setTitle('سڕینەوەی ڕۆڵ ')
+            .addField(' ناوی ڕۆڵی سڕاوە   ', role.name, true)
+            .addField('  ئایدی ڕۆڵ ', role.id, true)
+            .addField(' ڕەنگی ڕۆڵ  ', role.hexColor, true)
+            .addField('  ', exec, true)
             .setColor('#36393e') 
             .setTimestamp()
             
@@ -416,11 +416,11 @@ client.on('roleCreate', role => {
           let log = role.guild.channels.find('name', 'log');
           if (!log) return;
           let embed = new Discord.RichEmbed()
-            .setTitle('+    ')
-            .addField(' اســم الــرتــبــه  ', role.name, true)
-            .addField(' هــويــة الــرتــبــه ', role.id, true)
-            .addField(' لــون الــرتــبــه ', role.hexColor, true)
-            .addField(' بــواســطــه ', exec, true)
+            .setTitle('+ڕۆڵ دروست کردن    ')
+            .addField('  ناوی ڕۆڵ  ', role.name, true)
+            .addField('  ئایدی ڕۆڵ ', role.id, true)
+            .addField('  ڕەنگی ڕۆڵ ', role.hexColor, true)
+            .addField('  ', exec, true)
             .setColor('#36393e') 
             .setTimestamp()
             
@@ -440,7 +440,7 @@ client.on('roleCreate', role => {
   client.on("guildBanAdd", (guild, member) => {
   client.setTimeout(() => {
     guild.fetchAuditLogs({
-        limit: 1,
+        limit: 3,
         type: 22
       })
       .then(audit => {
@@ -450,11 +450,11 @@ client.on('roleCreate', role => {
           if (!log) return;
           client.fetchUser(member.id).then(myUser => {
           let embed = new Discord.RichEmbed()
-        .setAuthor("حــظــر عــضــو :  ")
+        .setAuthor("باند کراو :  ")
         .setColor('#36393e') 
         .setThumbnail(myUser.avatarURL)
-        .addField(' الــعــضــو  ',`**${myUser.username}**`,true)
-        .addField('  بــواســطــه ',`**${exec}**`,true)
+        .addField('   ',`**${myUser.username}**`,true)
+        .addField('   ',`**${exec}**`,true)
         .setFooter(myUser.username,myUser.avatarURL)
             .setTimestamp();
           log.send(embed).catch(e => {
@@ -483,11 +483,11 @@ client.on('roleCreate', role => {
           if (!log) return;
           client.fetchUser(member.id).then(myUser => {
           let embed = new Discord.RichEmbed()
-        .setAuthor("  فــك حــظــر عــن عــضــو ")
+        .setAuthor("     ")
         .setColor('#36393e') 
 		 .setThumbnail(myUser.avatarURL)
-        .addField(' الــعــضــو  ',`**${myUser.username}**`,true)
-        .addField('  بــواســطــه ',`**${exec}**`,true)
+        .addField('   ',`**${myUser.username}**`,true)
+        .addField('   ',`**${exec}**`,true)
         .setFooter(myUser.username,myUser.avatarURL)
             .setTimestamp();
           log.send(embed).catch(e => {
@@ -511,7 +511,7 @@ client.on("message", async message => {
    
  
  
-    const prefix = "t!" // البرفكس
+    const prefix = "t!" //comand
  
  
  
@@ -551,7 +551,7 @@ client.on("guildMemberAdd", async member => {
         if(member.user.bot) member.kick("Anti bot is on !")
     }
 
-    let channel = member.guild.channels.find("name", "log"); // اسم الروم الخاص باللوق
+    let channel = member.guild.channels.find("name", "log");  
 
     if(channel) {
         let embed = new Discord.RichEmbed()
