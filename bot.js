@@ -624,8 +624,8 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 client.on("message", message => {
-  if (message.content === "t!help") {
-    message.channel.send("◤◢***__t!antibot on__***◣◥ ←***__بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بێت___ ◤◢t!antibot off***");
+  if (message.content === "") {
+    message.channel.send("");
     message.channel.sendFile("");
   }
 });
