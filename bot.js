@@ -330,7 +330,7 @@ client.on('guildMemberAdd', member => {
     let embed = new Discord.RichEmbed()
        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
        .setColor('#36393e')
-       .setDescription(` <@${member.user.id}>  انــضــم لــلــســيــرفــر `)
+       .setDescription(` <@${member.user.id}> هاتە ناو سێرڤەر `)
        .setTimestamp();
      channel.send({embed:embed});
 });
@@ -347,7 +347,7 @@ client.on('guildMemberRemove', member => {
     let embed = new Discord.RichEmbed()
        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
        .setColor('#36393e')
-       .setDescription(` <@${member.user.id}>  خــرج مــن الــســيــرفــر `)
+       .setDescription(` <@${member.user.id}>  دەرچو لە سێرڤەر  `)
        .setTimestamp();
      channel.send({embed:embed});
 });
@@ -359,10 +359,10 @@ client.on('messageDelete', message => {
    
     let embed = new Discord.RichEmbed()
        .setAuthor(`${message.author.tag}`, message.author.avatarURL)
- .setTitle('  مــســح رســالــه  :   ')
- .addField('  الــرســالــه  ',`${message.cleanContent}`)
- .addField('  مــســحــت فــي  ',`<#${message.channel.id}>`)
- .addField(' يــواســطــه  ', `<@${message.author.id}> `)
+ .setTitle('سڕینەوەی نامە  :   ')
+ .addField('   لە لایەن ',`${message.cleanContent}`)
+ .addField('   لە چەناڵی  ',`<#${message.channel.id}>`)
+ .addField('   ', `<@${message.author.id}> `)
        .setColor('#36393e')
        .setTimestamp();
      channel.send({embed:embed});
@@ -416,7 +416,7 @@ client.on('roleCreate', role => {
           let log = role.guild.channels.find('name', 'log');
           if (!log) return;
           let embed = new Discord.RichEmbed()
-            .setTitle('+  انــشــاء رتــبــه ')
+            .setTitle('+    ')
             .addField(' اســم الــرتــبــه  ', role.name, true)
             .addField(' هــويــة الــرتــبــه ', role.id, true)
             .addField(' لــون الــرتــبــه ', role.hexColor, true)
