@@ -24,9 +24,9 @@ app.listen(process.env.PROT);
 setInterval(() => {
 	http.get(`http://security-chanel.glitch.me/`);
 }, 280000);
-let developers = ["641969954920333323"];
+let developers = ["561923346028036096"];
 const admin = "t!";
-const prefix = "t!";
+const prefix = "!t";
 
 
 //=============================== - [ Bot ] - ===================================
@@ -184,7 +184,6 @@ client.on("reachLimit", (limit)=> {
        .setDescription(` ${limit.user.username}  ___*** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی  لێکرایەوە***___  `)
        .setTimestamp();
   log.send(loghack);
-  log.send("@everyone");
   limit.guild.owner.send(limit.user.username+"___** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی لێکرایەوە**___")
   limit.member.roles.map(role => {
     limit.member.removeRole(role.id)
