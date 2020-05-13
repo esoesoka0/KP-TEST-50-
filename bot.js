@@ -305,11 +305,11 @@ client.on('voiceStateUpdate', (oldM, newM) => {
  
     let embed = new Discord.RichEmbed()
        .setAuthor(`${message.author.tag}`, message.author.avatarURL)
-.setTitle(' تــعــديــل رســالــه  :  ')
-.addField('قــبــل الــتــعــديــل',`${message.cleanContent}`)
-.addField(' بــعــد  الــتــعــديــل ',`${newMessage.cleanContent}`)
-.addField(' عــدلــت فــي  ',`<#${message.channel.id}>`)
-.addField(' يــواســطــه  ', `<@${message.author.id}> `)
+.setTitle(' دەسکاری کردنی مەسج  :  ')
+.addField('پێش دەسکاری کردن ',`${message.cleanContent}`)
+.addField(' دوای دەسکاری کردن   ',`${newMessage.cleanContent}`)
+.addField('    ',`<#${message.channel.id}>`)
+.addField('   ', `<@${message.author.id}> `)
 .setColor('#36393e')
        .setTimestamp();
      channel.send({embed:embed});
@@ -599,3 +599,21 @@ client.login("NzAzNjM3ODU2ODQ1MDM3NTk4.XrrDdA.GtvKU3EswHRKz1DLc41EoTnlUgo");
  client.on('message', message => {
     if (message.content == prefix + "bot") {
     message.channel.send({
+        embed: new Discord.RichEmbed()
+            .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('RANDOM')
+            .setTitle('``INFO Bot`` ')
+            .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('``servers``', [client.guilds.size], true)
+            .addField('``channels``' , `[ ${client.channels.size} ]` , true)
+            .addField('``Users``' ,`[ ${client.users.size} ]` , true)
+            .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
+            .addField('``My ID``' , `[ ${client.user.id} ]` , true)
+			      .addField('``My Prefix``' , `[ t! ]` , true)
+			      .addField('``My Language``' , `[ Java Script ]` , true)
+			      .setFooter('By |『BSS』ToOFaN ')
+    })
+    }
+  });
