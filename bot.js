@@ -571,3 +571,31 @@ client.on("guildMemberAdd", async member => {
 
 
 client.login("NzAzNjM3ODU2ODQ1MDM3NTk4.XrrDdA.GtvKU3EswHRKz1DLc41EoTnlUgo");
+
+
+
+  client.on('message', function(msg){
+        const prefix = 't!'
+    if(msg.content == prefix + 'server')
+    { let embed = new Discord.RichEmbed() 
+    .setColor('RANDOM') 
+    .setThumbnail(msg.guild.iconURL) 
+    .setTitle(`Showing Details Of **${msg.guild.name}**`) 
+    .addField('🌐** جـۆری سـێـرڤـەر**',`[** __${msg.guild.region}__ **]`,true) 
+    .addField('🏅** __ڕێکخستن__**',`[** __${msg.guild.roles.size}__ **]`,true) 
+    .addField('🔴**__ هەمو مێمبەرەکان__**',`[** __${msg.guild.memberCount}__ **]`,true) 
+    .addField('🔵**__ ئەو کەسانەی ئۆنڵاین__**',`[** __${msg.guild.members.filter(m => m.presence.status == 'online').size}__ **]`,true) 
+    .addField('📝**__ رومی چاتی__**',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true) 
+    .addField('🎤**__ رۆمی دەنگی __**',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true) 
+    .addField('👑**__ ئـۆنـەر __**',`**${msg.guild.owner}**`,true) 
+    .addField('🆔**__ ئایدی سێرڤەر__**',`**${msg.guild.id}**`,true) 
+    .addField('📅**__ کاتی دانانی سێرڤەر __**',msg.guild.createdAt.toLocaleString())
+    msg.channel.send({embed:embed}); 
+    }
+  });
+
+
+
+ client.on('message', message => {
+    if (message.content == prefix + "bot") {
+    message.channel.send({
