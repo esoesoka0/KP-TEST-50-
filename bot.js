@@ -569,7 +569,7 @@ client.on("guildMemberAdd", async member => {
 
 
 
-client.login("NzAzNjM3ODU2ODQ1MDM3NTk4.XrrDdA.GtvKU3EswHRKz1DLc41EoTnlUgo");
+client.login("NzEwMTY0MTE4NTQzNTMyMDMy.XrweDA.R2O_Byz2vEnfr0LPqrUeWv4rlKo");
 
 
 
@@ -625,7 +625,7 @@ client.on("ready", () => {
 });
 client.on("message", message => {
   if (message.content === "t!help") {
-    message.channel.send("");
+    message.channel.send("◤◢***__t!antibot on__***◣◥ ←***__بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بێت___ ◤◢t!antibot off***");
     message.channel.sendFile("");
   }
 });
