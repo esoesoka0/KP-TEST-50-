@@ -25,8 +25,8 @@ setInterval(() => {
 	http.get(`http://security-chanel.glitch.me/`);
 }, 280000);
 let developers = ["641969954920333323"];
-const admin = "#";
-const prefix = "#";
+const admin = "t!";
+const prefix = "t!";
 
 
 //=============================== - [ Bot ] - ===================================
