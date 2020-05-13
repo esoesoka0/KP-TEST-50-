@@ -415,7 +415,7 @@ client.on('roleCreate', role => {
           let log = role.guild.channels.find('name', 'log');
           if (!log) return;
           let embed = new Discord.RichEmbed()
-            .setTitle('+ڕۆڵ دروست کردن    ')
+            .setTitle('ڕۆڵ دروست کردن    ')
             .addField('  ناوی ڕۆڵ  ', role.name, true)
             .addField('  ئایدی ڕۆڵ ', role.id, true)
             .addField('  ڕەنگی ڕۆڵ ', role.hexColor, true)
@@ -616,3 +616,5 @@ client.login("NzAzNjM3ODU2ODQ1MDM3NTk4.XrrDdA.GtvKU3EswHRKz1DLc41EoTnlUgo");
     })
     }
   });
+
+
