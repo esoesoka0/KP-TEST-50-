@@ -307,8 +307,8 @@ client.on('voiceStateUpdate', (oldM, newM) => {
 .setTitle(' دەسکاری کردنی مەسج  :  ')
 .addField('پێش دەسکاری کردن ',`${message.cleanContent}`)
 .addField(' دوای دەسکاری کردن   ',`${newMessage.cleanContent}`)
-.addField('    ',`<#${message.channel.id}>`)
-.addField('   ', `<@${message.author.id}> `)
+.addField('  ئەندام  ',`<#${message.channel.id}>`)
+.addField('  هۆکار ', `<@${message.author.id}> `)
 .setColor('#36393e')
        .setTimestamp();
      channel.send({embed:embed});
@@ -361,7 +361,7 @@ client.on('messageDelete', message => {
  .setTitle('سڕینەوەی نامە  :   ')
  .addField('   لە لایەن ',`${message.cleanContent}`)
  .addField('   لە چەناڵی  ',`<#${message.channel.id}>`)
- .addField('   ', `<@${message.author.id}> `)
+ .addField('  هۆکار ', `<@${message.author.id}> `)
        .setColor('#36393e')
        .setTimestamp();
      channel.send({embed:embed});
@@ -372,7 +372,7 @@ client.on('messageDelete', message => {
       client.on("roleDelete", role => {
   client.setTimeout(() => {
     role.guild.fetchAuditLogs({
-        limit: 1,
+        limit: 3,
         type: 30
       })
       .then(audit => {
@@ -405,7 +405,7 @@ client.on('messageDelete', message => {
 client.on('roleCreate', role => {
   client.setTimeout(() => {
     role.guild.fetchAuditLogs({
-        limit: 1,
+        limit: 3,
         type: 30
       })
       .then(audit => {
