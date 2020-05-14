@@ -181,10 +181,10 @@ client.on("reachLimit", (limit)=> {
   const loghack = new Discord.RichEmbed()
        .setAuthor(`${limit.user.tag}`, limit.user.avatarURL)
        .setColor('#36393e')
-       .setDescription(` ${limit.user.username}  ___*** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی  لێکرایەوە***___  `)
+       .setDescription(` ${limit.user.username}  ___*** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی  لێکرایەوە سەیری بەشی لۆگ بکا تاکو بزانیت چی کردوە***___  `)
        .setTimestamp();
   log.send(loghack);
-  limit.guild.owner.send(limit.user.username+"___** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی لێکرایەوە**___")
+  limit.guild.owner.send(limit.user.username+"___** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی لێکرایەوە سەیری بەشی لۆگ بکە بزانە چی ۆردوە**___")
   limit.member.roles.map(role => {
     limit.member.removeRole(role.id)
     .catch(log.send)
