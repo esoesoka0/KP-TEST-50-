@@ -613,12 +613,32 @@ client.on("message", message => {
 
     client.on("message", m => {
   if (m.content === "t!help") {
-    let Dashboard = "◥◣t!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                                                                                                                                                      [Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە";
+    let Dashboard = "◥◣t!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                                                                                                                                                      [Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                                                                    [NOTE]ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی لۆگ دروست بکەیت";
     var addserver ="";
     var SUPPORT = "";
     let embed = new Discord.RichEmbed().setTitle(`***زانیاری لەسەر بەکار هێنانی بۆت***`)
       .setDescription(`                                                                                                               
 **${Dashboard}**
+**[ Server Support](${SUPPORT})**`);
+    m.react("✅");
+    m.author.send(embed);
+  }
+});
+
+
+
+
+
+
+client.on("message", m => {
+  if (m.content === "t!inv") {
+    let Dashboard = " ";
+    var addserver ="   ";
+    var SUPPORT = "   ";
+    let embed = new Discord.RichEmbed().setTitle(`لینکی بۆت`)
+      .setDescription(`                                                                                                               
+**[Add To Your Server ](${addserver})**    
+**[Dashboard](${Dashboard})**
 **[ Server Support](${SUPPORT})**`);
     m.react("✅");
     m.author.send(embed);
