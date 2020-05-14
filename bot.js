@@ -556,8 +556,8 @@ client.on("guildMemberAdd", async member => {
         let embed = new Discord.RichEmbed()
         .setTitle(` هەوڵ درا بۆت بێنرێتە ژورەوە کیک کرا   (kicked !)`)
         .setDescription(`
-        **- Bot name: ** ${member.user.username}
-        **- Bot ID: ** ${member.id}`)
+        **- Mmember Name: ** ${member.user.username}
+        **- Mmeber ID: ** ${member.id}`)
         
         
         channel.send(embed)
