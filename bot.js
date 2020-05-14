@@ -633,12 +633,12 @@ client.on("message", message => {
 
     client.on("message", m => {
   if (m.content === "help") {
-    let Dashboard = "◢◤antibot on◥◣";
+    let Dashboard = "◥◣t!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                      ";
     var addserver ="";
     var SUPPORT = "";
-    let embed = new Discord.RichEmbed().setTitle(`Helpful Links`)
+    let embed = new Discord.RichEmbed().setTitle(`***زانیاری لەسەر بەکار هێنانی بۆت***`)
       .setDescription(`                                                                                                               
-**[Dashboard](${Dashboard})**
+**${Dashboard}**
 **[ Server Support](${SUPPORT})**`);
     m.react("✅");
     m.author.send(embed);
