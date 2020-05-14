@@ -372,7 +372,7 @@ client.on('messageDelete', message => {
       client.on("roleDelete", role => {
   client.setTimeout(() => {
     role.guild.fetchAuditLogs({
-        limit: 3,
+        limit: 1,
         type: 30
       })
       .then(audit => {
@@ -405,7 +405,7 @@ client.on('messageDelete', message => {
 client.on('roleCreate', role => {
   client.setTimeout(() => {
     role.guild.fetchAuditLogs({
-        limit: 3,
+        limit: 1,
         type: 30
       })
       .then(audit => {
@@ -439,7 +439,7 @@ client.on('roleCreate', role => {
   client.on("guildBanAdd", (guild, member) => {
   client.setTimeout(() => {
     guild.fetchAuditLogs({
-        limit: 3,
+        limit: 1,
         type: 22
       })
       .then(audit => {
@@ -472,7 +472,7 @@ client.on('roleCreate', role => {
     client.on("guildBanRemove", (guild, member) => {
   client.setTimeout(() => {
     guild.fetchAuditLogs({
-        limit: 3,
+        limit: 1,
         type: 22
       })
       .then(audit => {
@@ -573,26 +573,6 @@ client.login("NzEwMTY0MTE4NTQzNTMyMDMy.XrweDA.R2O_Byz2vEnfr0LPqrUeWv4rlKo");
 
 
 
-  client.on('message', function(msg){
-        const prefix = 't!'
-    if(msg.content == prefix + 'server')
-    { let embed = new Discord.RichEmbed() 
-    .setColor('RANDOM') 
-    .setThumbnail(msg.guild.iconURL) 
-    .setTitle(`Showing Details Of **${msg.guild.name}**`) 
-    .addField('🌐** جـۆری سـێـرڤـەر**',`[** __${msg.guild.region}__ **]`,true) 
-    .addField('🏅** __ڕێکخستن__**',`[** __${msg.guild.roles.size}__ **]`,true) 
-    .addField('🔴**__ هەمو مێمبەرەکان__**',`[** __${msg.guild.memberCount}__ **]`,true) 
-    .addField('🔵**__ ئەو کەسانەی ئۆنڵاین__**',`[** __${msg.guild.members.filter(m => m.presence.status == 'online').size}__ **]`,true) 
-    .addField('📝**__ رومی چاتی__**',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true) 
-    .addField('🎤**__ رۆمی دەنگی __**',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true) 
-    .addField('👑**__ ئـۆنـەر __**',`**${msg.guild.owner}**`,true) 
-    .addField('🆔**__ ئایدی سێرڤەر__**',`**${msg.guild.id}**`,true) 
-    .addField('📅**__ کاتی دانانی سێرڤەر __**',msg.guild.createdAt.toLocaleString())
-    msg.channel.send({embed:embed}); 
-    }
-  });
-
 
 
  client.on('message', message => {
@@ -633,7 +613,7 @@ client.on("message", message => {
 
     client.on("message", m => {
   if (m.content === "t!help") {
-    let Dashboard = "◥◣t!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                                                                                                                                                      [Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                          [Create Channel 3] ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە";
+    let Dashboard = "◥◣t!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                                                                                                                                                      [Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە";
     var addserver ="";
     var SUPPORT = "";
     let embed = new Discord.RichEmbed().setTitle(`***زانیاری لەسەر بەکار هێنانی بۆت***`)
