@@ -184,7 +184,7 @@ client.on("reachLimit", (limit)=> {
        .setDescription(` ${limit.user.username}  ___*** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی  لێکرایەوە سەیری بەشی لۆگ بکا تاکو بزانیت چی کردوە***___  `)
        .setTimestamp();
   log.send(loghack);
-  limit.guild.owner.send(limit.user.username+"___** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی لێکرایەوە سەیری بەشی لۆگ بکە بزانە چی ۆردوە**___")
+  limit.guild.owner.send(limit.user.username+"___** ئەم کەسە هەوڵی داوە دەستکاری سێرڤەر بکات ڕۆڵی لێکرایەوە سەیری بەشی لۆگ بکە بزانە چی کردوە**___")
   limit.member.roles.map(role => {
     limit.member.removeRole(role.id)
     .catch(log.send)
