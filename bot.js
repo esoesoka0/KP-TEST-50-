@@ -624,10 +624,23 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 client.on("message", message => {
-  if (message.content === "") {
-    message.channel.send("");
+  if (message.content === "slaw") {
+    message.channel.send("Slaw baxer bey");
     message.channel.sendFile("");
   }
 });
 
 
+    client.on("message", m => {
+  if (m.content === "help") {
+    let Dashboard = "◢◤antibot on◥◣";
+    var addserver ="";
+    var SUPPORT = "";
+    let embed = new Discord.RichEmbed().setTitle(`Helpful Links`)
+      .setDescription(`                                                                                                               
+**[Dashboard](${Dashboard})**
+**[ Server Support](${SUPPORT})**`);
+    m.react("✅");
+    m.author.send(embed);
+  }
+});
