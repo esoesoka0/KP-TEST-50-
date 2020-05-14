@@ -526,7 +526,7 @@ let antibot = await db.fetch(`antibot_${message.guild.id}`);
     if(antibot === null) antibot = "off";  
    
     if(cmd === "antibot") {
-    if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
+    if (!message.guild.member(message.author).hasPermission("Owner"))
         return message.reply(`Only ADMINISTRATOR can use this command`)
         if(!args[0]) return message.reply(`___***دەتەوێت بۆت بێتە ژوروە یان نەیەت؟***___ \`off / on\``)
  
@@ -554,10 +554,10 @@ client.on("guildMemberAdd", async member => {
 
     if(channel) {
         let embed = new Discord.RichEmbed()
-        .setTitle(`  (kicked !)`)
+        .setTitle(`  (Member join)`)
         .setDescription(`
-        **- Mmember Name: ** ${member.user.username}
-        **- Mmeber ID: ** ${member.id}`)
+        ** Mmember Name: ** ${member.user.username}
+        ** Mmeber ID: ** ${member.id}`)
         
         
         channel.send(embed)
@@ -633,11 +633,11 @@ client.on("message", message => {
 client.on("message", m => {
   if (m.content === "t!inv") {
     let Dashboard = " ";
-    var addserver ="   ";
+    var addserver =" https://discordapp.com/oauth2/authorize?client_id=708966763307597885&permissions=0&scope=bot ";
     var SUPPORT = "   ";
     let embed = new Discord.RichEmbed().setTitle(`لینکی بۆت`)
       .setDescription(`                                                                                                               
-**[Add To Your Server ](${addserver})**    
+(${addserver})**    
 **[Dashboard](${Dashboard})**
 **[ Server Support](${SUPPORT})**`);
     m.react("✅");
