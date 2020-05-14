@@ -22,7 +22,7 @@ app.get("/", (request , response) => {
 });
 app.listen(process.env.PROT);
 setInterval(() => {
-	http.get(`http://security-chanel.glitch.me/`);
+	http.get(`http://securitychak.glitch.me/`);
 }, 280000);
 let developers = ["561923346028036096"];
 const admin = "!t";
@@ -554,7 +554,7 @@ client.on("guildMemberAdd", async member => {
 
     if(channel) {
         let embed = new Discord.RichEmbed()
-        .setTitle(` هەوڵ درا بۆت بێنرێتە ژورەوە کیک کرا   (kicked !)`)
+        .setTitle(`  (kicked !)`)
         .setDescription(`
         **- Mmember Name: ** ${member.user.username}
         **- Mmeber ID: ** ${member.id}`)
