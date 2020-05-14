@@ -569,7 +569,7 @@ client.on("guildMemberAdd", async member => {
 
 
 
-client.login("NzEwMTY0MTE4NTQzNTMyMDMy.XrweDA.R2O_Byz2vEnfr0LPqrUeWv4rlKo");
+client.login("NzA4OTY2NzYzMzA3NTk3ODg1.XryhDA.Klt1-9mh_xuGf4qhDQ8tBX_OTWQ");
 
 
 
