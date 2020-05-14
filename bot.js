@@ -307,8 +307,8 @@ client.on('voiceStateUpdate', (oldM, newM) => {
 .setTitle(' دەسکاری کردنی مەسج  :  ')
 .addField('پێش دەسکاری کردن ',`${message.cleanContent}`)
 .addField(' دوای دەسکاری کردن   ',`${newMessage.cleanContent}`)
-.addField('  ئەندام  ',`<#${message.channel.id}>`)
-.addField('  هۆکار ', `<@${message.author.id}> `)
+.addField('  لەچەناڵی  ',`<#${message.channel.id}>`)
+.addField('  لەلایەن ', `<@${message.author.id}> `)
 .setColor('#36393e')
        .setTimestamp();
      channel.send({embed:embed});
@@ -359,9 +359,9 @@ client.on('messageDelete', message => {
     let embed = new Discord.RichEmbed()
        .setAuthor(`${message.author.tag}`, message.author.avatarURL)
  .setTitle('سڕینەوەی نامە  :   ')
- .addField('   لە لایەن ',`${message.cleanContent}`)
+ .addField(' نامە  ',`${message.cleanContent}`)
  .addField('   لە چەناڵی  ',`<#${message.channel.id}>`)
- .addField('  هۆکار ', `<@${message.author.id}> `)
+ .addField('  لەلایەن ', `<@${message.author.id}> `)
        .setColor('#36393e')
        .setTimestamp();
      channel.send({embed:embed});
@@ -387,7 +387,7 @@ client.on('messageDelete', message => {
             .addField(' ناوی ڕۆڵی سڕاوە   ', role.name, true)
             .addField('  ئایدی ڕۆڵ ', role.id, true)
             .addField(' ڕەنگی ڕۆڵ  ', role.hexColor, true)
-            .addField('  ', exec, true)
+            .addField(' لەلایەن ', exec, true)
             .setColor('#36393e') 
             .setTimestamp()
             
@@ -419,7 +419,7 @@ client.on('roleCreate', role => {
             .addField('  ناوی ڕۆڵ  ', role.name, true)
             .addField('  ئایدی ڕۆڵ ', role.id, true)
             .addField('  ڕەنگی ڕۆڵ ', role.hexColor, true)
-            .addField('  ', exec, true)
+            .addField(' لەلایەن ', exec, true)
             .setColor('#36393e') 
             .setTimestamp()
             
