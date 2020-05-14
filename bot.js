@@ -632,8 +632,8 @@ client.on("message", message => {
 
 
     client.on("message", m => {
-  if (m.content === "help") {
-    let Dashboard = "◥◣t!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                      ";
+  if (m.content === "t!help") {
+    let Dashboard = "◥◣t!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                                                                                      //Note//ئەم بۆتە ئامادە کراوە لە سێرڤەرا تەنها دەبێت چەناڵێک دروست بکەیت بەناوی لۆگ بۆ ئەوەی بکەوێتە ئیش                                                               Dlete role 3    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێ دەکرێتەوە←                   ";
     var addserver ="";
     var SUPPORT = "";
     let embed = new Discord.RichEmbed().setTitle(`***زانیاری لەسەر بەکار هێنانی بۆت***`)
