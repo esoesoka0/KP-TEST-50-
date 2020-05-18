@@ -19,7 +19,7 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PROT);
 setInterval(() => {
-  http.get(`http://.glitch.me/`);
+  http.get(`http://tonybahez.glitch.me/`);
 }, 280000);
 let developers = ["561923346028036096"];
 const admin = "!t";
