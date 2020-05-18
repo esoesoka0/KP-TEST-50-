@@ -639,7 +639,7 @@ client.on("message", message => {
 client.on("message", m => {
   if (m.content === "a!help") {
     let Dashboard =
-      "◥◣a!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                         [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت ";
+      "◥◣a!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                         [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت [a!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
     var addserver = "";
     var SUPPORT = "https://discord.gg/h2xFT8X joine am servera bkan dllakan";
     let embed = new Discord.RichEmbed(`By ToNy`).setTitle(
@@ -776,19 +776,29 @@ client.on("voiceStateUpdate", (oldMember, newMember) => {
   }
 });
 
-
-client.on("message", message => {
-  var prefix = ""; // البرفكس
-
-  if (message.content.startsWith(prefix + "linkbot")) {
-    var mbot = message.mentions.members.first();
-    message.channel.send(
-      `https://discordapp.com/api/oauth2/authorize?client_id=${mbot.id}&permissions=0&scope=bot`
-    );
+client.on("message", async message => {
+  var prefix = "+"; // البرفكس
+  if (message.content.includes("discord.gg")) {
+    if (message.member.hasPermission("MANAGE_MASSAGES")) return;
+    if (!message.channel.guild) return;
+    message.delete();
   }
 });
 
-
-
+client.on("message", async message => {
+  if (message.content.startsWith(prefix + "linkbot")) {
+    let invite = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setAuthor(message.author.username, message.author.displayAvatarURL)
+      .setThumbnail(message.author.avatarURL)
+      .setTitle(
+        "**__کلیک لێرە بکە بۆ ئەوەی بۆت ئەکە ئینڤاتی سێرڤەری خۆت بکەی:sparkling_heart:__**"
+      )
+      .setURL(
+        `https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`
+      );
+    message.channel.sendEmbed(invite);
+  }
+});
 
 client.login("NjgxOTUwNjI5NDMzNzA0NDcy.XsJHJA.qmUhCU80Vx3vLQSgkFxm3IlwJ5M");
