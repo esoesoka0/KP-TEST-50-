@@ -612,7 +612,7 @@ client.on("message", message => {
         .addField("``My ID``", `[ ${client.user.id} ]`, true)
         .addField("``My Prefix``", `[ t! ]`, true)
         .addField("``My Language``", `[ Java Script ]`, true)
-        .setFooter("By |『BSS』ToOFaN ")
+        .setFooter("By | A47xToNy ")
     });
   }
 });
@@ -630,17 +630,20 @@ client.on("message", message => {
 client.on("message", m => {
   if (m.content === "a!help") {
     let Dashboard =
-      "◥◣t!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                                                                                                                                                      [Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                                                                    [NOTE]ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی لۆگ دروست بکەیت";
-    var addserver = "";
-    var SUPPORT = "";
+        "◥◣a!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                                                                                                                                                      [Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                         [log] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت ";
+  var addserver = "";
+    var SUPPORT = "   ";
     let embed = new Discord.RichEmbed().setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     )
-      .setDescription(`                                                                                                               
-**${Dashboard}**
+      .setDescription(
+        
+        (${addserver})**    
+**[Dashboard](${Dashboard})**
 **[ Server Support](${SUPPORT})**`);
     m.react("✅");
-    m.author.send(embed);
+
+        
   }
 });
 
