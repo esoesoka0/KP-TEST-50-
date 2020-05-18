@@ -19,7 +19,7 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PROT);
 setInterval(() => {
-  http.get(`http://securitychak.glitch.me/`);
+  http.get(`http://.glitch.me/`);
 }, 280000);
 let developers = ["561923346028036096"];
 const admin = "!t";
@@ -28,13 +28,24 @@ const prefix = "a!";
 //=============================== - [ Bot ] - ===================================
 
 client.on("ready", () => {
-  console.log(`Logged in as : ${client.user.tag}!`);
-  console.log(`Servers : [ " ${client.guilds.size} " ]`);
-  console.log(`Users : [ " ${client.users.size} " ]`);
-  console.log(`Channels : [ " ${client.channels.size} " ]`);
-  client.user.setActivity("a!help | Security Strong", { type: "playing" });
-  client.user.setStatus("idle");
+  console.log(
+    `Online In Servers : ${client.guilds.size} | Users : ${client.users.size}`
+  );
+  let statuses = [
+    `Servers: ${client.guilds.size} | Users: ${client.users.size}`,
+    ` By/Ａ47ｘＴｏＮｙ📿`,
+    `a!help`,
+    
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    client.user.setActivity(STREAMING, {
+      type: "STREAMING",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 1000);
 });
+
 
 client.on("message", async message => {
   if (message.author.id !== "703637856845037598") return;
@@ -630,19 +641,19 @@ client.on("message", message => {
 client.on("message", m => {
   if (m.content === "a!help") {
     let Dashboard =
-        "◥◣a!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**]                                                                                                                                                      [Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                         [log] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت ";
+        "◥◣a!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤t!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                         [log] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت ";
   var addserver = "";
     var SUPPORT = "   ";
-    let embed = new Discord.RichEmbed().setTitle(
+    let embed = new Discord.RichEmbed(`By ToNy`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     )
-      .setDescription(
+      .setDescription(`
         
-        (${addserver})**    
+  (${addserver})**    
 **[Dashboard](${Dashboard})**
 **[ Server Support](${SUPPORT})**`);
     m.react("✅");
-
+    m.author.send(embed);
         
   }
 });
@@ -653,7 +664,7 @@ client.on("message", m => {
     var addserver =
       " https://discordapp.com/oauth2/authorize?client_id=708966763307597885&permissions=0&scope=bot ";
     var SUPPORT = "   ";
-    let embed = new Discord.RichEmbed().setTitle(`لینکی بۆت`)
+    let embed = new Discord.RichEmbed(`By ToNy`).setTitle(`لینکی بۆت`)
       .setDescription(`                                                                                                               
 (${addserver})**    
 **[Dashboard](${Dashboard})**
