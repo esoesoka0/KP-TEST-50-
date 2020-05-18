@@ -641,7 +641,7 @@ client.on("message", m => {
     let Dashboard =
       "◥◣a!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                         [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت ";
     var addserver = "";
-    var SUPPORT = "   ";
+    var SUPPORT = "https://discord.gg/h2xFT8X joine am servera bkan dllakan";
     let embed = new Discord.RichEmbed(`By ToNy`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
@@ -706,5 +706,89 @@ client.on("message", message => {
     message.delete();
   }
 });
+
+let room = "709662347500978197"; //تعديل مهم ايدي روم عد الاعضاء والترحيب ، روم صوتي
+
+client.on("guildMemberAdd", member => {
+  let guild = client.channels.get(room).guild.id;
+
+  if (member.guild.id != guild) return;
+  client.channels
+    .get(room)
+    .setName("Welcome " + member.user.username)
+    .then(m => {
+      setTimeout(() => {
+        client.channels
+          .get(room)
+          .setName(member.guild.name + " - " + member.guild.members.size);
+      }, 3000);
+    });
+});
+
+client.on("guildMemberRemove", member => {
+  let guild = client.channels.get(room).guild.id;
+
+  if (member.guild.id != guild) return;
+  client.channels
+    .get(room)
+    .setName("Member Left :(")
+    .then(m => {
+      setTimeout(() => {
+        client.channels
+          .get(room)
+          .setName(member.guild.name + " - " + member.guild.members.size);
+      }, 3000);
+    });
+});
+
+client.on("voiceStateUpdate", (oldMember, newMember) => {
+  let guild = client.channels.get(room).guild.id;
+
+  if (oldMember.guild.id != guild) return;
+  let newUserChannel = newMember.voiceChannel;
+  let oldUserChannel = oldMember.voiceChannel;
+  if (oldUserChannel === undefined && newUserChannel !== undefined) {
+    client.channels
+      .get(room)
+      .setName("Hi, " + oldMember.user.username)
+      .then(m => {
+        setTimeout(() => {
+          client.channels
+            .get(room)
+            .setName(
+              oldMember.guild.name + " - " + oldMember.guild.members.size
+            );
+        }, 3000);
+      });
+  } else if (newUserChannel === undefined) {
+    client.channels
+      .get(room)
+      .setName("Bye, " + oldMember.user.username)
+      .then(m => {
+        setTimeout(() => {
+          client.channels
+            .get(room)
+            .setName(
+              oldMember.guild.name + " - " + oldMember.guild.members.size
+            );
+        }, 3000);
+      });
+  }
+});
+
+
+client.on("message", message => {
+  var prefix = ""; // البرفكس
+
+  if (message.content.startsWith(prefix + "linkbot")) {
+    var mbot = message.mentions.members.first();
+    message.channel.send(
+      `https://discordapp.com/api/oauth2/authorize?client_id=${mbot.id}&permissions=0&scope=bot`
+    );
+  }
+});
+
+
+
 
 client.login("NjgxOTUwNjI5NDMzNzA0NDcy.XsJHJA.qmUhCU80Vx3vLQSgkFxm3IlwJ5M");
