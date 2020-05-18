@@ -639,9 +639,16 @@ client.on("message", message => {
 client.on("message", m => {
   if (m.content === "a!help") {
     let Dashboard =
-      "◥◣a!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                         [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت [a!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
+      "◥◣a!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                         [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت 
+  [a!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
     var addserver = "";
-    var SUPPORT = "https://discord.gg/h2xFT8X joine am servera bkan dllakan";
+    var SUPPORT = 
+        
+        
+        
+        
+        
+        "https://discord.gg/h2xFT8X joine am servera bkan dllakan";
     let embed = new Discord.RichEmbed(`By ToNy`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
@@ -798,6 +805,20 @@ client.on("message", async message => {
         `https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`
       );
     message.channel.sendEmbed(invite);
+  }
+});
+
+client.on("ready", async () => {
+  console.log("Starting..");
+  let g = client.guilds.get("696875727198617630");
+  let c = g.channels.get("709662347500978197");
+  if (c.type === "voice") {
+    c.join();
+    setInterval(() => {
+      if (!g.me.voiceChannel) c.join();
+    }, 1);
+  } else {
+    console.log('Failed To Join: \n The Channel Type isn "Listening."');
   }
 });
 
