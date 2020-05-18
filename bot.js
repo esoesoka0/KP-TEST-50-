@@ -23,7 +23,7 @@ setInterval(() => {
 }, 280000);
 let developers = ["561923346028036096"];
 const admin = "!t";
-const prefix = "t!";
+const prefix = "a!";
 
 //=============================== - [ Bot ] - ===================================
 
@@ -32,7 +32,7 @@ client.on("ready", () => {
   console.log(`Servers : [ " ${client.guilds.size} " ]`);
   console.log(`Users : [ " ${client.users.size} " ]`);
   console.log(`Channels : [ " ${client.channels.size} " ]`);
-  client.user.setActivity("t!help | Security Strong", { type: "playing" });
+  client.user.setActivity("a!help | Security Strong", { type: "playing" });
   client.user.setStatus("idle");
 });
 
@@ -587,7 +587,7 @@ client.on("guildMemberAdd", async member => {
   member.guild.owner.send(embed);
 });
 
-client.login("");
+
 
 client.on("message", message => {
   if (message.content == prefix + "bot") {
@@ -698,3 +698,6 @@ client.on("message", message => {
     message.delete();
   }
 });
+
+
+client.login("");
