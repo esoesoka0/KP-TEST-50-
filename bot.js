@@ -837,4 +837,4 @@ client.on("guildMemberAdd", member => {
   }
 });
 
-client.login("NjgxOTUwNjI5NDMzNzA0NDcy.XsJHJA.qmUhCU80Vx3vLQSgkFxm3IlwJ5M");
+client.login("NjgxOTUwNjI5NDMzNzA0NDcy.XsSvkw.ToqjggNQd3RNr8TY7SsiYJU2XSo");
