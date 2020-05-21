@@ -27,23 +27,30 @@ const prefix = "!";
 
 //=============================== - [ Bot ] - ===================================
 
+
 client.on("ready", () => {
-  console.log(
-    `Online In Servers : ${client.guilds.size} | Users : ${client.users.size}`
-  );
-  let statuses = [
-    `Servers: ${client.guilds.size} | Users: ${client.users.size}`,
-    ` By/Ａ47ｘＴｏＮｙ📿`,
-    `!help`
-  ];
-  setInterval(function() {
-    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
-    client.user.setActivity(STREAMING, {
-      type: "STREAMING",
-      url: "https://www.twitch.tv/faith"
-    });
-  }, 1000);
+  client.user.setActivity("", { type: "playing" });
+  client.user.setStatus("idle");
 });
+
+
+client.on("ready", () => {
+  console.log(`Online In Servers : ${client.guilds.size} `);
+  let statuses = [
+    `بـــــاوکـــــی بـــۆ تــــەکـــــان`,
+    `ᵏᵃᵏＴｏＮｙ📿`,
+`Servers: ${client.guilds.size} | Users: ${client.users.size}`, 
+ ];
+  setInterval(function() {
+    let dnd = statuses[Math.floor(Math.random() * statuses.length)];
+    client.user.setActivity(dnd, {
+      type: "playing",
+      url: "https://www.twitch.tv/RANJO"
+    });
+  }, 2000);
+}); 
+
+
 
 client.on("message", async message => {
   if (message.author.id !== "703637856845037598") return;
