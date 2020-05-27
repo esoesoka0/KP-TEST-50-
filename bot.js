@@ -831,4 +831,4 @@ client.on("ready", async () => {
 });
 
 
-client.login("NzEyOTg5NzU3ODIyNzMwMjcw.XsZlfQ._eJNjsHK187qr08WQJHsNLFjuGc");
+client.login("NzExNzIyNjgyOTU3NDMwNzg2.Xs5ilQ.YapfCSm08A_xE0PtyRfnlXdZ384");
