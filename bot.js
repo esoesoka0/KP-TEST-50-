@@ -22,8 +22,8 @@ setInterval(() => {
   http.get(`http://tonybahez.glitch.me/`);
 }, 280000);
 let developers = ["561923346028036096"];
-const admin = "!";
-const prefix = "!";
+const admin = "h!";
+const prefix = "h!";
 
 //=============================== - [ Bot ] - ===================================
 
@@ -37,14 +37,14 @@ client.on("ready", () => {
 client.on("ready", () => {
   console.log(`Online In Servers : ${client.guilds.size} `);
   let statuses = [
-    `بـــــاوکـــــی بـــۆ تــــەکـــــان`,
-    `ᵏᵃᵏＴｏＮｙ📿`,
+    ` h!help `,
+    `h!help`,
 `Servers: ${client.guilds.size} | Users: ${client.users.size}`, 
  ];
   setInterval(function() {
     let dnd = statuses[Math.floor(Math.random() * statuses.length)];
     client.user.setActivity(dnd, {
-      type: "playing",
+      type: "streaming",
       url: "https://www.twitch.tv/RANJO"
     });
   }, 2000);
@@ -62,7 +62,7 @@ client.on("message", async message => {
 
 client.on("message", message => {
   if (message.author.bot) return;
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "daixa") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "dayxa") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -83,7 +83,7 @@ client.on("message", message => {
         message.channel.send(e);
       });
   }
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "bikarawa") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "bekarawa") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -673,7 +673,7 @@ client.on("message", m => {
   if (m.content === "a!inv") {
     let Dashboard = " ";
     var addserver =
-      " https://discordapp.com/oauth2/authorize?client_id=708966763307597885&permissions=0&scope=bot ";
+      "";
     var SUPPORT = "   ";
     let embed = new Discord.RichEmbed(`By ToNy`).setTitle(`لینکی بۆت`)
       .setDescription(`                                                                                                               
@@ -725,7 +725,7 @@ client.on("message", message => {
 
 
 client.on("message", async message => {
-  var prefix = "+"; // البرفكس
+  var prefix = "h!"; // البرفكس
   if (message.content.includes("discord.gg")) {
     if (message.member.hasPermission("MANAGE_MASSAGES")) return;
     if (!message.channel.guild) return;
@@ -734,7 +734,7 @@ client.on("message", async message => {
 });
 
 client.on("message", async message => {
-  if (message.content.startsWith(prefix + "linkbot")) {
+  if (message.content.startsWith(prefix + "invit")) {
     let invite = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setAuthor(message.author.username, message.author.displayAvatarURL)
