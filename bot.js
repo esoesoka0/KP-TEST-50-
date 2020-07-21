@@ -27,20 +27,18 @@ const prefix = "h!";
 
 //=============================== - [ Bot ] - ===================================
 
-
 client.on("ready", () => {
   client.user.setActivity("", { type: "playing" });
   client.user.setStatus("idle");
 });
-
 
 client.on("ready", () => {
   console.log(`Online In Servers : ${client.guilds.size} `);
   let statuses = [
     ` h!help `,
     `h!help`,
-`Servers: ${client.guilds.size} | Users: ${client.users.size}`, 
- ];
+    `Servers: ${client.guilds.size} | Users: ${client.users.size}`
+  ];
   setInterval(function() {
     let dnd = statuses[Math.floor(Math.random() * statuses.length)];
     client.user.setActivity(dnd, {
@@ -48,9 +46,7 @@ client.on("ready", () => {
       url: "https://www.twitch.tv/RANJO"
     });
   }, 2000);
-}); 
-
-
+});
 
 client.on("message", async message => {
   if (message.author.id !== "703637856845037598") return;
@@ -645,9 +641,10 @@ client.on("message", message => {
 
 client.on("message", m => {
   if (m.content === "h!help") {
-    let THOMAS  =
-      "◥◣h!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                       [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت                            [a!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
-    var addserver = "linke bot https://discordapp.com/channels/@me/719162866262867990/735173831358152736";
+    let THOMAS =
+      "◥◣h!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]◢◤h!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە  [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە   [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە  [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە  [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                       [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت                            [h!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
+    var addserver =
+      "https://images-ext-2.discordapp.net/external/zPWo1dqHgygmYJ7UmebhsV-qkf6-d4XgyYQnxDFFf6M/https/media.discordapp.net/attachments/719162866262867990/734183403783585792/image0.gif";
 
     var SUPPORT = "https://discord.gg/EdMMKzF joine am servera bkan dllakan ";
     let embed = new Discord.RichEmbed(`By ToNy`).setTitle(
@@ -722,8 +719,6 @@ client.on("message", message => {
   }
 });
 
-
-
 client.on("message", async message => {
   var prefix = "h!"; // البرفكس
   if (message.content.includes("discord.gg")) {
@@ -748,7 +743,5 @@ client.on("message", async message => {
     message.channel.sendEmbed(invite);
   }
 });
-
-
 
 client.login("NzE5MTU5NjYxNDcwODEwMTMz.XtzXsA.sxV3IKfJNhPW7BdwRsLk_5-O0j8");
