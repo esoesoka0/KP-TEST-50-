@@ -28,14 +28,14 @@ const prefix = "h!";
 //=============================== - [ Bot ] - ===================================
 
 client.on("ready", () => {
-  client.user.setActivity("", { type: "playing" });
-  client.user.setStatus("idle");
+  client.user.setActivity("", { type: "streaming" });
+  client.user.setStatus("streaming");
 });
 
 client.on("ready", () => {
   console.log(`Online In Servers : ${client.guilds.size} `);
   let statuses = [
-    ` h!help `,
+    `h!help `,
     `h!help`,
     `Servers: ${client.guilds.size} | Users: ${client.users.size}`
   ];
@@ -43,7 +43,7 @@ client.on("ready", () => {
     let dnd = statuses[Math.floor(Math.random() * statuses.length)];
     client.user.setActivity(dnd, {
       type: "streaming",
-      url: "https://www.twitch.tv/RANJO"
+      url: "https://www.twitch.tv/govandpuk"
     });
   }, 2000);
 });
