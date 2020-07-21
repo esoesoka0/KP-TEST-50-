@@ -645,17 +645,17 @@ client.on("message", message => {
 
 client.on("message", m => {
   if (m.content === "h!help") {
-    let TONY =
-      "◥◣h!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                       [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت                            [a!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
-    var addserver = "";
+    let THOMAS  =
+      "◥◣h!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]  ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                       [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت                            [a!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
+    var addserver = "https://discord.gg/EdMMKzF";
 
-    var SUPPORT = "https://discord.gg/Zd9WC6v joine am servera bkan dllakan ";
+    var SUPPORT = "https://discord.gg/EdMMKzF joine am servera bkan dllakan ";
     let embed = new Discord.RichEmbed(`By ToNy`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
         
   (${addserver})**    
-**[TONY](${TONY})**
+**[TO](${TO})**
 
 
 
