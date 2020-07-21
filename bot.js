@@ -644,7 +644,7 @@ client.on("message", m => {
     let THOMAS =
       "◥◣h!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]◢◤h!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە  [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە   [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە  [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە  [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                       [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت                            [h!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
     var addserver =
-      "https://images-ext-2.discordapp.net/external/zPWo1dqHgygmYJ7UmebhsV-qkf6-d4XgyYQnxDFFf6M/https/media.discordapp.net/attachments/719162866262867990/734183403783585792/image0.gif";
+      "https://discordapp.com/channels/@me/719162866262867990/735246466142044270";
 
     var SUPPORT = "https://discord.gg/EdMMKzF joine am servera bkan dllakan ";
     let embed = new Discord.RichEmbed(`By ToNy`).setTitle(
