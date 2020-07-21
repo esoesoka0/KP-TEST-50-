@@ -218,7 +218,7 @@ client.on("raw", packet => {
 });
 
 client.on("reachLimit", limit => {
-  let log = limit.guild.channels.find(channel => channel.name === "secruti-logs");
+  let log = limit.guild.channels.find(channel => channel.name === "logs");
   const loghack = new Discord.RichEmbed()
     .setAuthor(`${limit.user.tag}`, limit.user.avatarURL)
     .setColor("#36393e")
@@ -294,7 +294,7 @@ client.on("voiceStateUpdate", (oldM, newM) => {
   let d1 = oldM.serverDeaf;
   let d2 = newM.serverDeaf;
 
-  let ch = oldM.guild.channels.find("name", "secruti-logs");
+  let ch = oldM.guild.channels.find("name", "logs");
   if (!ch) return;
 
   oldM.guild.fetchAuditLogs().then(logs => {
@@ -347,7 +347,7 @@ client.on("messageUpdate", (message, newMessage) => {
     message.author.bot
   )
     return;
-  const channel = message.guild.channels.find("name", "secruti-logs");
+  const channel = message.guild.channels.find("name", "logs");
   if (!channel) return;
 
   let embed = new Discord.RichEmbed()
@@ -366,7 +366,7 @@ client.on("guildMemberAdd", member => {
   if (!member || !member.id || !member.guild) return;
   const guild = member.guild;
 
-  const channel = member.guild.channels.find("name", "secruti-logs");
+  const channel = member.guild.channels.find("name", "logs");
   if (!channel) return;
   let memberavatar = member.user.avatarURL;
   const fromNow = moment(member.user.createdTimestamp).fromNow();
@@ -384,7 +384,7 @@ client.on("guildMemberRemove", member => {
   if (!member || !member.id || !member.guild) return;
   const guild = member.guild;
 
-  const channel = member.guild.channels.find("name", "secruti-logs");
+  const channel = member.guild.channels.find("name", "logs");
   if (!channel) return;
   let memberavatar = member.user.avatarURL;
   const fromNow = moment(member.joinedTimestamp).fromNow();
@@ -406,7 +406,7 @@ client.on("messageDelete", message => {
     message.author.bot
   )
     return;
-  const channel = message.guild.channels.find("name", "secruti-logs");
+  const channel = message.guild.channels.find("name", "logs");
   if (!channel) return;
 
   let embed = new Discord.RichEmbed()
@@ -430,7 +430,7 @@ client.on("roleDelete", role => {
       .then(audit => {
         let exec = audit.entries.map(a => a.executor.username);
         try {
-          let log = role.guild.channels.find("name", "secruti-logs");
+          let log = role.guild.channels.find("name", "logs");
           if (!log) return;
           let embed = new Discord.RichEmbed()
             .setColor("#36393e")
@@ -462,7 +462,7 @@ client.on("roleCreate", role => {
       .then(audit => {
         let exec = audit.entries.map(a => a.executor.username);
         try {
-          let log = role.guild.channels.find("name", "secruti-logs");
+          let log = role.guild.channels.find("name", "logs");
           if (!log) return;
           let embed = new Discord.RichEmbed()
             .setTitle("ڕۆڵ دروست کردن    ")
@@ -493,7 +493,7 @@ client.on("guildBanAdd", (guild, member) => {
       .then(audit => {
         let exec = audit.entries.map(a => a.executor.username);
         try {
-          let log = guild.channels.find("name", "secruti-logs");
+          let log = guild.channels.find("name", "logs");
           if (!log) return;
           client.fetchUser(member.id).then(myUser => {
             let embed = new Discord.RichEmbed()
@@ -525,7 +525,7 @@ client.on("guildBanRemove", (guild, member) => {
       .then(audit => {
         let exec = audit.entries.map(a => a.executor.username);
         try {
-          let log = guild.channels.find("name", "secruti-logs");
+          let log = guild.channels.find("name", "logs");
           if (!log) return;
           client.fetchUser(member.id).then(myUser => {
             let embed = new Discord.RichEmbed()
@@ -645,17 +645,17 @@ client.on("message", message => {
 
 client.on("message", m => {
   if (m.content === "h!help") {
-    let TONY =
+    let THOMAS  =
       "◥◣h!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                       [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت                            [a!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
-    var addserver = "";
+    var addserver = "https://discord.gg/EdMMKzF";
 
-    var SUPPORT = " joine am servera bkan dllakan ";
+    var SUPPORT = "https://discord.gg/EdMMKzF joine am servera bkan dllakan ";
     let embed = new Discord.RichEmbed(`By ToNy`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
         
   (${addserver})**    
-**[TONY](${TONY})**
+**[THOMAS](${THOMAS})**
 
 
 
