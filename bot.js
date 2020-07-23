@@ -586,7 +586,7 @@ client.on("guildMemberAdd", async member => {
     if (member.user.bot) member.kick("Anti bot is on !");
   }
 
-  let channel = member.guild.channels.find("name", "secruti-logs");
+  let channel = member.guild.channels.find("name", "logs");
 
   if (channel) {
     let embed = new Discord.RichEmbed().setTitle(`  (Member join)`)
@@ -624,7 +624,7 @@ client.on("message", message => {
         .addField("``My ID``", `[ ${client.user.id} ]`, true)
         .addField("``My Prefix``", `[ t! ]`, true)
         .addField("``My Language``", `[ Java Script ]`, true)
-        .setFooter("By | A47xToNy ")
+        .setFooter("By | THOMAS SHELBY ")
     });
   }
 });
