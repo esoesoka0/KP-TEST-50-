@@ -744,4 +744,4 @@ client.on("message", async message => {
   }
 });
 
-client.login("NzE5MTU5NjYxNDcwODEwMTMz.XtzXsA.sxV3IKfJNhPW7BdwRsLk_5-O0j8");
+client.login("token bot");
