@@ -624,7 +624,7 @@ client.on("message", message => {
         .addField("``My ID``", `[ ${client.user.id} ]`, true)
         .addField("``My Prefix``", `[ t! ]`, true)
         .addField("``My Language``", `[ Java Script ]`, true)
-        .setFooter("By | THOMAS SHELBY ")
+        .setFooter("By | DX SQWAD KING ")
     });
   }
 });
