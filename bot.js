@@ -58,7 +58,7 @@ client.on("message", async message => {
 
 client.on("message", message => {
   if (message.author.bot) return;
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "dayxa") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "claws") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -79,7 +79,7 @@ client.on("message", message => {
         message.channel.send(e);
       });
   }
-  if (message.content.split("hi ")[0].toLowerCase() === prefix + "bekarawa") {
+  if (message.content.split("hi ")[0].toLowerCase() === prefix + "open") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
