@@ -646,7 +646,7 @@ client.on("message", m => {
     var addserver =
       "https://discordapp.com/channels/@me/719162866262867990/735246466142044270";
 
-    var SUPPORT = "https://discord.gg/nd9RRGg bo zanere jjoine am servera bkan dllakan ";
+    var SUPPORT = "https://discord.gg/HhemPN4 bo zanere jjoine am servera bkan dllakan ";
     let embed = new Discord.RichEmbed(`By DXSQWAD`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
