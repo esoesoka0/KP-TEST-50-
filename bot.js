@@ -79,7 +79,7 @@ client.on("message", message => {
         message.channel.send(e);
       });
   }
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "bekarawa") {
+  if (message.content.split("hi ")[0].toLowerCase() === prefix + "bekarawa") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -744,4 +744,4 @@ client.on("message", async message => {
   }
 });
 
-client.login("token bot");
+client.login("NzM2MTU1NDk5NDA1NTA4NjQ5.XxqsPA.J_UR1sljiVQW2iEh_3Nb_HzrRUo");
