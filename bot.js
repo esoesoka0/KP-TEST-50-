@@ -624,7 +624,7 @@ client.on("message", message => {
         .addField("``My ID``", `[ ${client.user.id} ]`, true)
         .addField("``My Prefix``", `[ t! ]`, true)
         .addField("``My Language``", `[ Java Script ]`, true)
-        .setFooter("By | DX SQWAD KING ")
+        .setFooter("By | DARK SHELBY")
     });
   }
 });
@@ -646,8 +646,8 @@ client.on("message", m => {
     var addserver =
       "https://discordapp.com/channels/@me/719162866262867990/735246466142044270";
 
-    var SUPPORT = "https://discord.gg/HhemPN4 bo zanere jjoine am servera bkan dllakan ";
-    let embed = new Discord.RichEmbed(`By DXSQWAD`).setTitle(
+    var SUPPORT = "https://discord.gg/6JzTD2c bo zanere jjoine am servera bkan dllakan ";
+    let embed = new Discord.RichEmbed(`By DARK SHELBY`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
         
@@ -672,7 +672,7 @@ client.on("message", m => {
     var addserver =
       "https://discordapp.com/oauth2/authorize?client_id=719159661470810133&scope=bot&permissions=8";
     var SUPPORT = "   ";
-    let embed = new Discord.RichEmbed(`By DXSQWAD`).setTitle(`لینکی بۆت`)
+    let embed = new Discord.RichEmbed(`By DARK SHELBY`).setTitle(`لینکی بۆت`)
       .setDescription(`                                                                                                               
 (${addserver})**    
 **[Dashboard](${Dashboard})**
