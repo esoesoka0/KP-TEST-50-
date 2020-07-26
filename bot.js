@@ -644,7 +644,7 @@ client.on("message", m => {
     let DXSQWAD =
       "◥◣h!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]◢◤h!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە  [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە   [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە  [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە  [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                       [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت                            [h!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
     var addserver =
-      "https://discordapp.com/channels/@me/719162866262867990/735246466142044270";
+      "❤️👇🏻👇🏻👇🏻𝐴𝑊𝐵𝑂𝑇𝐴 𝐿𝐴 𝐿𝐴𝑌𝑁 𝐷𝐴𝑅𝐾 𝑆𝐻𝐸𝐿𝐵𝑌 𝐷𝑅𝑊𝑆𝑇 𝐾𝑅𝑌𝐴  𝐿𝐼𝑁𝐾 𝐿𝐴 𝐵𝑁𝐴𝑊𝐴 𝐷𝐴𝑁𝐷𝑅𝐴𝑊𝐴👇🏻👇🏻👇🏻🖤";
 
     var SUPPORT = "https://discord.gg/6JzTD2c bo zanere jjoine am servera bkan dllakan ";
     let embed = new Discord.RichEmbed(`By DARK SHELBY`).setTitle(
