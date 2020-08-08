@@ -58,7 +58,7 @@ client.on("message", async message => {
 
 client.on("message", message => {
   if (message.author.bot) return;
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "claws") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "1") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -79,7 +79,7 @@ client.on("message", message => {
         message.channel.send(e);
       });
   }
-  if (message.content.split("hi ")[0].toLowerCase() === prefix + "open") {
+  if (message.content.split("hi ")[0].toLowerCase() === prefix + "2") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -101,7 +101,7 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "clear") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "3") {
     const word = message.content;
     const number = word.slice(7, word.length);
     const int = Number(number);
@@ -624,7 +624,7 @@ client.on("message", message => {
         .addField("``My ID``", `[ ${client.user.id} ]`, true)
         .addField("``My Prefix``", `[ t! ]`, true)
         .addField("``My Language``", `[ Java Script ]`, true)
-        .setFooter("By | DARK SHELBY")
+        .setFooter("By | BOSS")
     });
   }
 });
@@ -644,9 +644,9 @@ client.on("message", m => {
     let DXSQWAD =
       "◥◣h!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]◢◤h!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە  [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە   [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە  [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە  [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                       [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت                            [h!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
     var addserver =
-      "❤️👇🏻👇🏻👇🏻𝐴𝑊𝐵𝑂𝑇𝐴 𝐿𝐴 𝐿𝐴𝑌𝑁 𝐷𝐴𝑅𝐾 𝑆𝐻𝐸𝐿𝐵𝑌 𝐷𝑅𝑊𝑆𝑇 𝐾𝑅𝑌𝐴  𝐿𝐼𝑁𝐾 𝐿𝐴 𝐵𝑁𝐴𝑊𝐴 𝐷𝐴𝑁𝐷𝑅𝐴𝑊𝐴👇🏻👇🏻👇🏻🖤";
+      "❤️👇🏻👇🏻👇🏻𝐴𝑊𝐵𝑂𝑇𝐴 𝐿𝐴 𝐿𝐴𝑌𝑁 BOSS 𝐷𝑅𝑊𝑆𝑇 𝐾𝑅𝑌𝐴  𝐿𝐼𝑁𝐾 𝐿𝐴 𝐵𝑁𝐴𝑊𝐴 𝐷𝐴𝑁𝐷𝑅𝐴𝑊𝐴👇🏻👇🏻👇🏻🖤";
 
-    var SUPPORT = "https://discord.gg/6JzTD2c bo zanere jjoine am servera bkan dllakan ";
+    var SUPPORT = "https://discord.gg/cpzEBGp jjoine am servera bkan dllakan ";
     let embed = new Discord.RichEmbed(`By DARK SHELBY`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
