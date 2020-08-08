@@ -652,7 +652,7 @@ client.on("message", m => {
     ).setDescription(`
         
   (${addserver})**    
-**[](${DXSQWAD})**
+**[BOSS](${DXSQWAD})**
 
 
 
