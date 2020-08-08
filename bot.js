@@ -28,8 +28,8 @@ const prefix = "h!";
 //=============================== - [ Bot ] - ===================================
 
 client.on("ready", () => {
-  client.user.setActivity("", { type: "streaming" });
-  client.user.setStatus("streaming");
+  client.user.setActivity("", { type: "Playing" });
+  client.user.setStatus("Playing");
 });
 
 client.on("ready", () => {
@@ -646,13 +646,13 @@ client.on("message", m => {
     var addserver =
       "❤️👇🏻👇🏻👇🏻𝐴𝑊𝐵𝑂𝑇𝐴 𝐿𝐴 𝐿𝐴𝑌𝑁 BOSS 𝐷𝑅𝑊𝑆𝑇 𝐾𝑅𝑌𝐴  𝐿𝐼𝑁𝐾 𝐿𝐴 𝐵𝑁𝐴𝑊𝐴 𝐷𝐴𝑁𝐷𝑅𝐴𝑊𝐴👇🏻👇🏻👇🏻🖤";
 
-    var SUPPORT = "https://discord.gg/cpzEBGp jjoine am servera bkan dllakan ";
+    var SUPPORT = "https://discord.gg/cpzEBGp SERVAR BOSS ";
     let embed = new Discord.RichEmbed(`By DARK SHELBY`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
         
   (${addserver})**    
-**[DXSQWAD](${DXSQWAD})**
+**[](${DXSQWAD})**
 
 
 
