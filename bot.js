@@ -822,4 +822,4 @@ client.on("ready", async () => {
   }
 });
 
-client.login("NjgxOTUwNjI5NDMzNzA0NDcy.XsJHJA.qmUhCU80Vx3vLQSgkFxm3IlwJ5M");
+client.login("NzM0MDU5OTU3OTIxNzc1NjY3.XxMMnA.zKO2V-uLJfw2kK3AVe1w74eDjtA");
