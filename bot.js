@@ -22,30 +22,27 @@ setInterval(() => {
   http.get(`http://tonybahez.glitch.me/`);
 }, 280000);
 let developers = ["561923346028036096"];
-const admin = "h!";
-const prefix = "h!";
+const admin = "!t";
+const prefix = "a!";
 
 //=============================== - [ Bot ] - ===================================
 
 client.on("ready", () => {
-  client.user.setActivity("", { type: "Playing" });
-  client.user.setStatus("Playing");
-});
-
-client.on("ready", () => {
-  console.log(`Online In Servers : ${client.guilds.size} `);
+  console.log(
+    `Online In Servers : ${client.guilds.size} | Users : ${client.users.size}`
+  );
   let statuses = [
-    `h!help `,
-    `h!help`,
-    `Servers: ${client.guilds.size} | Users: ${client.users.size}`
+    `Servers: ${client.guilds.size} | Users: ${client.users.size}`,
+    ` By/Ａ47ｘＴｏＮｙ📿`,
+    `a!help`
   ];
   setInterval(function() {
-    let dnd = statuses[Math.floor(Math.random() * statuses.length)];
-    client.user.setActivity(dnd, {
-      type: "streaming",
-      url: "https://www.twitch.tv/govandpuk"
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    client.user.setActivity(STREAMING, {
+      type: "STREAMING",
+      url: "https://www.twitch.tv/faith"
     });
-  }, 2000);
+  }, 1000);
 });
 
 client.on("message", async message => {
@@ -58,7 +55,7 @@ client.on("message", async message => {
 
 client.on("message", message => {
   if (message.author.bot) return;
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "1") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "daixa") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -79,7 +76,7 @@ client.on("message", message => {
         message.channel.send(e);
       });
   }
-  if (message.content.split("hi ")[0].toLowerCase() === prefix + "2") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "bikarawa") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -101,7 +98,7 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "3") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "clear") {
     const word = message.content;
     const number = word.slice(7, word.length);
     const int = Number(number);
@@ -141,26 +138,26 @@ var config = {
     {
       type: "CHANNEL_CREATE",
       logType: "CHANNEL_CREATE",
-      limit: 1,
+      limit: 3,
       delay: 5000
     },
     {
       type: "CHANNEL_DELETE",
       logType: "CHANNEL_DELETE",
-      limit: 1,
+      limit: 3,
       delay: 5000
     },
     {
       type: "GUILD_MEMBER_REMOVE",
       logType: "MEMBER_KICK",
-      limit: 1,
+      limit: 3,
       delay: 5000
     },
-    { type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 1, delay: 5000 },
+    { type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 3, delay: 5000 },
     {
       type: "GUILD_ROLE_CREATE",
       logType: "ROLE_CREATE",
-      limit: 1,
+      limit: 3,
       delay: 5000
     },
     { type: "GUILD_ROLE_DELETE", logType: "ROLE_DELETE", limit: 1, delay: 5000 }
@@ -546,7 +543,7 @@ client.on("guildBanRemove", (guild, member) => {
 const db = require("quick.db"); // npm i quick.db
 
 client.on("message", async message => {
-  const prefix = "h!"; //comand
+  const prefix = "a!"; //comand
 
   if (message.author.bot) return;
   if (!message.guild) return;
@@ -624,7 +621,7 @@ client.on("message", message => {
         .addField("``My ID``", `[ ${client.user.id} ]`, true)
         .addField("``My Prefix``", `[ t! ]`, true)
         .addField("``My Language``", `[ Java Script ]`, true)
-        .setFooter("By | BOSS")
+        .setFooter("By | A47xToNy ")
     });
   }
 });
@@ -640,26 +637,24 @@ client.on("message", message => {
 });
 
 client.on("message", m => {
-  if (m.content === "h!help") {
-    let DXSQWAD =
-      "◥◣h!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]◢◤h!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە  [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە   [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە  [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە  [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                       [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت                            [h!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
-    var addserver =
-      "❤️👇🏻👇🏻👇🏻𝐴𝑊𝐵𝑂𝑇𝐴 𝐿𝐴 𝐿𝐴𝑌𝑁 BOSS 𝐷𝑅𝑊𝑆𝑇 𝐾𝑅𝑌𝐴  𝐿𝐼𝑁𝐾 𝐿𝐴 𝐵𝑁𝐴𝐴👇🏻👇🏻👇🏻🖤";
-
-    var SUPPORT = "";
-    let embed = new Discord.RichEmbed(`By DARK SHELBY`).setTitle(
+  if (m.content === "a!help") {
+    let Dashboard =
+      "◥◣a!antibot on◢◤ [**بەم فرمانە بۆت ناتوانێ جۆینی سێرڤەر بکات**]                                                                   ◢◤a!antibot off◥◣[** فرمانە بۆت دەتوانێ جۆینی سێرڤەر بکات**][Dlete Role 3]    ئەوەندە ڕۆڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                 [Create Role 3] ئەوەندە ڕۆڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Dlete Channel 3] ئەوەندە چەناڵە ڕەش بکەیتەوە ڕۆڵت لێدەکرێتەوە                                                                            [Create Channel 3]ئەوەندە چەناڵە دروست بکەیت ڕۆڵت لێدەکرێتەوە                                                                                                    [Ban member 3] ئەوەندە میمبەر باند بکەیت ڕۆڵت لێدەکرێتەوە                                                                    [Mmeber Kick 3]ئەوەندە میمبەر کیک بکەی ڕۆڵت لێدەکرێتەوە                         [logs] ئەم فرمانانە هەموی چالاکە تەنها دەبێت چەناڵێک بەناوی  دروست کەیت 
+  [a!linkbot]ئەم فەرمانە لێبە بۆ دەست کەوتنی لینکی بۆت";
+    var addserver = "";
+    var SUPPORT = 
+        
+        
+        
+        
+        
+        "https://discord.gg/h2xFT8X joine am servera bkan dllakan";
+    let embed = new Discord.RichEmbed(`By ToNy`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
         
   (${addserver})**    
-**[BOSS](${DXSQWAD})**
-
-
-
-
-
-
-
+**[Dashboard](${Dashboard})**
 **[ Server Support](${SUPPORT})**`);
     m.react("✅");
     m.author.send(embed);
@@ -667,12 +662,12 @@ client.on("message", m => {
 });
 
 client.on("message", m => {
-  if (m.content === "h!linkbot") {
+  if (m.content === "a!inv") {
     let Dashboard = " ";
     var addserver =
-      "https://discordapp.com/oauth2/authorize?client_id=719159661470810133&scope=bot&permissions=8";
+      " https://discordapp.com/oauth2/authorize?client_id=708966763307597885&permissions=0&scope=bot ";
     var SUPPORT = "   ";
-    let embed = new Discord.RichEmbed(`By DARK SHELBY`).setTitle(`لینکی بۆت`)
+    let embed = new Discord.RichEmbed(`By ToNy`).setTitle(`لینکی بۆت`)
       .setDescription(`                                                                                                               
 (${addserver})**    
 **[Dashboard](${Dashboard})**
@@ -719,8 +714,77 @@ client.on("message", message => {
   }
 });
 
+let room = "709662347500978197"; //تعديل مهم ايدي روم عد الاعضاء والترحيب ، روم صوتي
+
+client.on("guildMemberAdd", member => {
+  let guild = client.channels.get(room).guild.id;
+
+  if (member.guild.id != guild) return;
+  client.channels
+    .get(room)
+    .setName("Welcome " + member.user.username)
+    .then(m => {
+      setTimeout(() => {
+        client.channels
+          .get(room)
+          .setName(member.guild.name + " - " + member.guild.members.size);
+      }, 3000);
+    });
+});
+
+client.on("guildMemberRemove", member => {
+  let guild = client.channels.get(room).guild.id;
+
+  if (member.guild.id != guild) return;
+  client.channels
+    .get(room)
+    .setName("Member Left :(")
+    .then(m => {
+      setTimeout(() => {
+        client.channels
+          .get(room)
+          .setName(member.guild.name + " - " + member.guild.members.size);
+      }, 3000);
+    });
+});
+
+client.on("voiceStateUpdate", (oldMember, newMember) => {
+  let guild = client.channels.get(room).guild.id;
+
+  if (oldMember.guild.id != guild) return;
+  let newUserChannel = newMember.voiceChannel;
+  let oldUserChannel = oldMember.voiceChannel;
+  if (oldUserChannel === undefined && newUserChannel !== undefined) {
+    client.channels
+      .get(room)
+      .setName("Hi, " + oldMember.user.username)
+      .then(m => {
+        setTimeout(() => {
+          client.channels
+            .get(room)
+            .setName(
+              oldMember.guild.name + " - " + oldMember.guild.members.size
+            );
+        }, 3000);
+      });
+  } else if (newUserChannel === undefined) {
+    client.channels
+      .get(room)
+      .setName("Bye, " + oldMember.user.username)
+      .then(m => {
+        setTimeout(() => {
+          client.channels
+            .get(room)
+            .setName(
+              oldMember.guild.name + " - " + oldMember.guild.members.size
+            );
+        }, 3000);
+      });
+  }
+});
+
 client.on("message", async message => {
-  var prefix = "h!"; // البرفكس
+  var prefix = "+"; // البرفكس
   if (message.content.includes("discord.gg")) {
     if (message.member.hasPermission("MANAGE_MASSAGES")) return;
     if (!message.channel.guild) return;
@@ -729,7 +793,7 @@ client.on("message", async message => {
 });
 
 client.on("message", async message => {
-  if (message.content.startsWith(prefix + "invit")) {
+  if (message.content.startsWith(prefix + "linkbot")) {
     let invite = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setAuthor(message.author.username, message.author.displayAvatarURL)
@@ -744,4 +808,18 @@ client.on("message", async message => {
   }
 });
 
-client.login("NzM2MTAyNzY1NTg3MjAyMDYx.Xxp7Hw.DuFu-gFiUwEWOhhFExcQy5YVPz8o");
+client.on("ready", async () => {
+  console.log("Starting..");
+  let g = client.guilds.get("696875727198617630");
+  let c = g.channels.get("709662347500978197");
+  if (c.type === "voice") {
+    c.join();
+    setInterval(() => {
+      if (!g.me.voiceChannel) c.join();
+    }, 1);
+  } else {
+    console.log('Failed To Join: \n The Channel Type isn "Listening."');
+  }
+});
+
+client.login("NjgxOTUwNjI5NDMzNzA0NDcy.XsJHJA.qmUhCU80Vx3vLQSgkFxm3IlwJ5M");
