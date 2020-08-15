@@ -647,7 +647,7 @@ client.on("message", m => {
       "https://discordapp.com/channels/@me/719162866262867990/735246466142044270";
 
     var SUPPORT = "https://discord.gg/HhemPN4 bo zanere jjoine am servera bkan dllakan ";
-    let embed = new Discord.RichEmbed(`By DXSQWAD`).setTitle(
+    let embed = new Discord.RichEmbed(`By Robot.𝐄𝐒𝐎⁹⁹`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
         
@@ -672,7 +672,7 @@ client.on("message", m => {
     var addserver =
       "https://discordapp.com/oauth2/authorize?client_id=719159661470810133&scope=bot&permissions=8";
     var SUPPORT = "   ";
-    let embed = new Discord.RichEmbed(`By DXSQWAD`).setTitle(`لینکی بۆت`)
+    let embed = new Discord.RichEmbed(`By Robot.𝐄𝐒𝐎⁹⁹`).setTitle(`لینکی بۆت`)
       .setDescription(`                                                                                                               
 (${addserver})**    
 **[Dashboard](${Dashboard})**
@@ -744,4 +744,4 @@ client.on("message", async message => {
   }
 });
 
-client.login("NzM2MTU1NDk5NDA1NTA4NjQ5.XxqsPA.J_UR1sljiVQW2iEh_3Nb_HzrRUo");
+client.login("NzM0MDU5OTU3OTIxNzc1NjY3.XxMMnA.zKO2V-uLJfw2kK3AVe1w74eDjtA");
