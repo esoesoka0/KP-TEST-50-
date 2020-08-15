@@ -58,7 +58,7 @@ client.on("message", async message => {
 
 client.on("message", message => {
   if (message.author.bot) return;
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "claws") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "lock") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -79,7 +79,7 @@ client.on("message", message => {
         message.channel.send(e);
       });
   }
-  if (message.content.split("hi ")[0].toLowerCase() === prefix + "open") {
+  if (message.content.split("hi ")[0].toLowerCase() === prefix + "ulock") {
     if (!message.channel.guild) return;
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
@@ -101,7 +101,7 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
-  if (message.content.split(" ")[0].toLowerCase() === prefix + "clear") {
+  if (message.content.split(" ")[0].toLowerCase() === prefix + "ulock") {
     const word = message.content;
     const number = word.slice(7, word.length);
     const int = Number(number);
@@ -624,7 +624,7 @@ client.on("message", message => {
         .addField("``My ID``", `[ ${client.user.id} ]`, true)
         .addField("``My Prefix``", `[ t! ]`, true)
         .addField("``My Language``", `[ Java Script ]`, true)
-        .setFooter("By | THOMAS SHELBY ")
+        .setFooter("By | Robot.𝐄𝐒𝐎")
     });
   }
 });
@@ -646,13 +646,13 @@ client.on("message", m => {
     var addserver =
       "https://discordapp.com/channels/@me/719162866262867990/735246466142044270";
 
-    var SUPPORT = "https://discord.gg/HhemPN4 bo zanere jjoine am servera bkan dllakan ";
+    var SUPPORT = "https://discord.gg/tA7tXJD bo zanere jjoine am servera bkan dllakan ";
     let embed = new Discord.RichEmbed(`By Robot.𝐄𝐒𝐎⁹⁹`).setTitle(
       `***زانیاری لەسەر بەکار هێنانی بۆت***`
     ).setDescription(`
         
   (${addserver})**    
-**[DXSQWAD](${DXSQWAD})**
+**[Robot.𝐄𝐒𝐎](${DXSQWAD})**
 
 
 
