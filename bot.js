@@ -668,9 +668,9 @@ client.on("message", m => {
 
 client.on("message", m => {
   if (m.content === "h!linkbot") {
-    let Dashboard = " ";
+    let Dashboard = "https://discord.com/api/oauth2/authorize?client_id=735460729653821462&permissions=8&scope=bot";
     var addserver =
-      "https://discordapp.com/oauth2/authorize?client_id=719159661470810133&scope=bot&permissions=8";
+      "";
     var SUPPORT = "   ";
     let embed = new Discord.RichEmbed(`By Robot.𝐄𝐒𝐎⁹⁹`).setTitle(`لینکی بۆت`)
       .setDescription(`                                                                                                               
@@ -744,4 +744,4 @@ client.on("message", async message => {
   }
 });
 
-client.login("NzM0MDU5OTU3OTIxNzc1NjY3.XxMMnA.zKO2V-uLJfw2kK3AVe1w74eDjtA");
+client.login("NzM1NDYwNzI5NjUzODIxNDYy.XxglLg.Etx9Ds-Sdg8Tcww71rRGnx_Suc8");
